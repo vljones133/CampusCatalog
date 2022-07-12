@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchCampus, updateCampus } from '../redux/campuses';
+import { fetchCampus, updateCampus } from '../redux/singleCampus';
 
 class Campus extends React.Component {
   componentDidMount() {
-    this.props.fetchCampus(this.props.match.params.id);
+    this.props.getCampus(this.props.match.params.id);
   }
 
   //   componentDidUpdate(prevProps) {
@@ -15,6 +15,10 @@ class Campus extends React.Component {
 
   render() {
     const { campus, updateCampus } = this.props;
+    console.log(`**********CAMPUS: ${campus}**********`);
+    console.dir(campus);
+    const students = campus.students;
+    // console.log(`**********STUDENTS: ${students}**********`);
     return (
       <div key={campus.id}>
         <img src={campus.imageUrl} />
@@ -23,15 +27,17 @@ class Campus extends React.Component {
         <p>{campus.description}</p>
         <h3>Student's Enrolled:</h3>
         <ul>
-          {campus.students.map((student) => {
-            return student ? (
-              <li key={student.id}>
-                {student.firstName} {student.lastName}
-              </li>
-            ) : (
-              <p>Sorry, no students to see yet!</p>
-            );
-          })}
+          {students ? (
+            students.map((student) => {
+              return (
+                <li key={student.id}>
+                  {student.firstName} {student.lastName}
+                </li>
+              );
+            })
+          ) : (
+            <p>Sorry, no students to see yet!</p>
+          )}
         </ul>
       </div>
     );

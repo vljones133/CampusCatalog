@@ -17,12 +17,12 @@ export const updateCampus = (id, campus) => async (dispatch) => {
   dispatch(setCampus(campusesResponse.data));
 };
 
-const campusReducer = (state = {}, action) => {
+const campusReducer = (campus = {}, action) => {
   switch (action.type) {
     case SET_CAMPUS:
       return action.campus;
     default:
-      return state;
+      return campus;
   }
 };
 

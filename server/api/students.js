@@ -16,7 +16,7 @@ router.get('/:studentId', async (req, res, next) => {
   try {
     const student = await Student.findAll({
       where: {
-        authorId: req.params.studentId,
+        studentId: req.params.studentId,
       },
       include: [Campus],
     });
