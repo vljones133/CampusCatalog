@@ -1,11 +1,31 @@
-const { green, red } = require("chalk");
-const { db } = require("./server/db");
+const { green, red } = require('chalk');
+const { db } = require('./server/db');
+
+const Campus = require('./server/db/Campus');
+const Student = require('./server/db/Student');
+
+const campuses = require('./bin/MOCK_DATA_campuses.json');
+const students = require('./bin/MOCK_DATA_students.json');
 
 const seed = async () => {
   try {
     await db.sync({ force: true });
 
     // seed your database here!
+    await Promise.all(
+      campuses.map((campus) => {
+        return Campus.create(campus);
+      })
+    );
+
+    await Promise.all(
+      students.map((student) => {
+        return Student.create(student);
+      })
+    );
+
+    console.log(green('Seeding success!'));
+    db.close();
   } catch (err) {
     console.log(red(err));
   }
@@ -18,11 +38,11 @@ module.exports = seed;
 if (require.main === module) {
   seed()
     .then(() => {
-      console.log(green("Seeding success!"));
+      console.log(green('Seeding success!'));
       db.close();
     })
-    .catch(err => {
-      console.error(red("Oh noes! Something went wrong!"));
+    .catch((err) => {
+      console.error(red('Oh noes! Something went wrong!'));
       console.error(err);
       db.close();
     });
