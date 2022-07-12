@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import AllCampuses from './AllCampuses';
 import AllStudents from './AllStudents';
+import Campus from './Campus';
+import Student from './Student';
 
 const Routes = () => {
   return (
@@ -26,7 +28,8 @@ const Routes = () => {
             </Route>
             <Route exact path="/campuses" component={AllCampuses} />
             <Route exact path="/students" component={AllStudents} />
-            {/* <Route path="/candies/:id" component={Candy} /> */}
+            <Route path="/campuses/:id" component={Campus} />
+            <Route path="/students/:id" component={Student} />
           </Switch>
         </main>
       </div>
