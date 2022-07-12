@@ -25,9 +25,19 @@ nav {
   padding: 10px;
 }
 
+nav a {
+  color: lightblue;
+  padding: 0 20px;
+}
+
 main {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+img {
+  max-width: 450px;
+  height: auto;
 }

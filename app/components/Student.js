@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchStudent, updateStudent } from '../redux/students';
 
 class Student extends React.Component {
@@ -15,6 +16,8 @@ class Student extends React.Component {
 
   render() {
     const { student, updateStudent } = this.props;
+    const campus = student.getCampus();
+    console.log(`**********STUDENT_CAMPUS${campus}**********`);
     return (
       <div key={student.id}>
         <img src={student.imageUrl} />
@@ -24,9 +27,11 @@ class Student extends React.Component {
         <p>{student.email}</p>
         <p>{student.gpa}</p>
         <p>
-          {student.campus
-            ? student.campus.name
-            : 'Sorry, no campus to see yet!'}
+          {student.campusId ? (
+            <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+          ) : (
+            'Sorry, no campus to see yet!'
+          )}
         </p>
       </div>
     );

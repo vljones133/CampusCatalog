@@ -42,7 +42,6 @@ const mapState = ({ campuses }) => ({
 
 const mapDispatch = (dispatch) => ({
   getCampuses: () => dispatch(fetchCampuses()),
-  // fetchCampuses: () => dispatch(fetchCampuses()),
 });
 
 export default connect(mapState, mapDispatch)(AllCampuses);
