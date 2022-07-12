@@ -1,14 +1,30 @@
 'use strict';
 
 const router = require('express').Router();
-const Campus = require('../db/Campus');
+const { Campus, Student } = require('../db');
+// const Campus = require('../db/Campus');
 
 router.get('/', async (req, res, next) => {
   try {
     const campuses = await Campus.findAll();
     res.send(campuses);
-  } catch (e) {
-    next(e);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get('/:campusId', async (req, res, next) => {
+  try {
+    const campus = await Campus.findAll({
+      where: {
+        authorId: req.params.campusId,
+      },
+      include: [Student],
+    });
+    console.log(`*******EXPRESS ROUTER CAMPUSID+STUDENTS${campus}*****`);
+    res.send(campus);
+  } catch (error) {
+    next(error);
   }
 });
 
