@@ -21,6 +21,7 @@ module.exports = db.define('student', {
     allowNull: false,
     validate: {
       isEmail: true,
+      notEmpty: true,
     },
   },
   imageUrl: {

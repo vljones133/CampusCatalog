@@ -25,7 +25,7 @@ const seed = async () => {
     );
 
     console.log(green('Seeding success!'));
-    db.close();
+    // db.close();
   } catch (err) {
     console.log(red(err));
   }

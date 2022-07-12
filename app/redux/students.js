@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { SET_STUDENT } from './singleStudent';
 
-const SET_STUDENTS = 'SET STUDENTS';
+const SET_STUDENTS = 'SET_STUDENTS';
 
-export const setStudents = (payload) => ({
+export const setStudents = (students) => ({
   type: SET_STUDENTS,
-  payload,
+  students,
 });
 
 export const fetchStudents = () => async (dispatch) => {
@@ -18,10 +18,10 @@ export const fetchStudents = () => async (dispatch) => {
 export default function studentsReducer(state = [], action) {
   switch (action.type) {
     case SET_STUDENTS:
-      return action.payload;
+      return action.students;
     case SET_STUDENT:
       return state.map((student) => {
-        return student.id === action.payload.id ? action.payload : student;
+        return student.id === action.student.id ? action.student : student;
       });
     default:
       return state;

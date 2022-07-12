@@ -8,7 +8,7 @@ import { fetchStudents } from '../redux/students';
 // bottom) is connected to Redux. Our tests should cover _both_ cases.
 export class AllStudents extends React.Component {
   componentDidMount() {
-    this.props.fetchStudents();
+    this.props.getStudents();
   }
   render() {
     const { students } = this.props;
@@ -41,7 +41,7 @@ const mapState = ({ students }) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-  fetchStudents: () => dispatch(fetchStudents()),
+  getStudents: () => dispatch(fetchStudents()),
 });
 
 export default connect(mapState, mapDispatch)(AllStudents);
