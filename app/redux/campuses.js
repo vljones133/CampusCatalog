@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { SET_CAMPUS } from './singleCampus';
 
-const SET_CAMPUSES = 'SET CAMPUSES';
+const SET_CAMPUSES = 'SET_CAMPUSES';
 
-export const setCampuses = (payload) => ({
+export const setCampuses = (campuses) => ({
   type: SET_CAMPUSES,
-  payload,
+  campuses,
 });
 
 export const fetchCampuses = () => async (dispatch) => {
@@ -18,7 +18,7 @@ export const fetchCampuses = () => async (dispatch) => {
 export default function campusesReducer(state = [], action) {
   switch (action.type) {
     case SET_CAMPUSES:
-      return action.payload;
+      return action.campuses;
     case SET_CAMPUS:
       return state.map((campus) => {
         return campus.id === action.payload.id ? action.payload : campus;
