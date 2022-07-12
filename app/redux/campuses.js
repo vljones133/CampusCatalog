@@ -9,7 +9,7 @@ export const setCampuses = (payload) => ({
 });
 
 export const fetchCampuses = () => async (dispatch) => {
-  const campusesResponse = await axios.get('/api/candies');
+  const campusesResponse = await axios.get('/api/campuses');
   dispatch(setCampuses(campusesResponse.data));
 };
 
