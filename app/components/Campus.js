@@ -3,12 +3,17 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { updateCampusThunk, fetchCampus } from '../redux/singleCampus';
 import UpdateCampus from './UpdateCampus';
-import store from '../store';
 
 class Campus extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.getCampus(id);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.campus.id !== this.props.campus.id) {
+      this.props.getCampus(this.props.campus.id);
+    }
   }
 
   // unregisterStudent = (student, campus) => {
@@ -22,7 +27,6 @@ class Campus extends React.Component {
     return (
       <main className="singlePage">
         <aside>
-          {/* <UpdateCampus store={store} /> */}
           <UpdateCampus campus={campus} />
         </aside>
         <section key={campus.id}>

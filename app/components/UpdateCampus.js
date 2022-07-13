@@ -1,41 +1,31 @@
 import React, { Component } from 'react';
-import { updateCampusThunk } from '../redux/campuses';
-import { fetchCampus, setCampus } from '../redux/singleCampus';
+import {
+  fetchCampus,
+  setCampus,
+  updateCampusThunk,
+} from '../redux/singleCampus';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-//find and fix 500 error
-//clear form upon submit
-//update page
+//stop students from getting deleted
 class UpdateCampus extends Component {
-  componentDidMount() {
-    try {
-      // const campus = this.props.getCampus(this.props.campus.id);
-      const campus = this.props.campus;
-      console.log(`**********campus: ${campus}**********`);
-      console.dir(campus);
-    } catch (error) {
-      console.log(`**********COMPONENT-DID-MOUNT: ${error}**********`);
-      console.error(error);
-    }
-  }
+  // componentDidMount() {
+  //   try {
+  //     const { campus } = this.props;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
 
   componentWillUnmount() {
     this.props.clearCampus();
   }
 
-  // componentDidUpdate(prevProps) {
-  //   // if (prevProps.campus.id !== this.props.campus.id) {
-  //   //   this.setState({
-  //   //     name: this.props.campus.name || '',
-  //   //     address: this.props.campus.address || '',
-  //   //     description: this.props.campus.description || '',
-  //   //   });
-  //   // }
-  //   // if (prevProps.campus.id !== this.props.campus.id) {
-  //   //   this.props.getCampus(this.props.campus.id);
-  //   // }
-  // }
+  componentDidUpdate(prevProps) {
+    // if (prevProps.campus.id !== this.props.campus.id) {
+    //   this.props.getCampus(this.props.campus.id);
+    // }
+  }
 
   handleChange = (evt) => {
     this.setState({
@@ -46,11 +36,9 @@ class UpdateCampus extends Component {
   handleSubmit = (evt) => {
     evt.preventDefault();
     this.props.updateCampus({ ...this.props.campus, ...this.state });
-    // this.props.clearCampus();
-    this.setState({
-      name: '',
-      address: '',
-      description: '',
+    const form = document.getElementById('update-form');
+    form.childNodes.forEach((input) => {
+      input.value = '';
     });
   };
 
