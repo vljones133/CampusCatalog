@@ -1,21 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchCampus, updateCampus } from '../redux/singleCampus';
+import { fetchCampus } from '../redux/singleCampus';
 
 class Campus extends React.Component {
   componentDidMount() {
     this.props.getCampus(this.props.match.params.id);
   }
 
-  //   componentDidUpdate(prevProps) {
-  //     if (prevProps.match.params.candyId !== this.props.match.params.candyId) {
-  //       this.props.fetchSingleCandy(this.props.match.params.candyId);
-  //     }
-  //   }
-
   render() {
-    const { campus, updateCampus } = this.props;
+    const { campus } = this.props;
     const students = campus.students;
     return (
       <div key={campus.id}>
@@ -50,7 +44,7 @@ const mapStateToProps = ({ campus }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
-  updateCampus: (id, campus) => dispatch(updateCampus(id, campus)),
+  // updateCampus: (id, campus) => dispatch(updateCampus(id, campus)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campus);

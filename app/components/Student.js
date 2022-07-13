@@ -8,14 +8,8 @@ class Student extends React.Component {
     this.props.getStudent(this.props.match.params.id);
   }
 
-  //   componentDidUpdate(prevProps) {
-  //     if (prevProps.match.params.candyId !== this.props.match.params.candyId) {
-  //       this.props.fetchSingleCandy(this.props.match.params.candyId);
-  //     }
-  //   }
-
   render() {
-    const { student, updateStudent } = this.props;
+    const { student } = this.props;
     const campus = student.campus;
     return (
       <div key={student.id}>

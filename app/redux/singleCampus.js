@@ -12,15 +12,11 @@ export const fetchCampus = (id) => async (dispatch) => {
   dispatch(setCampus(campusResponse.data));
 };
 
-export const updateCampus = (id, campus) => async (dispatch) => {
-  const campusResponse = await axios.put(`/api/campuses/${id}`, campus);
-  dispatch(setCampus(campusResponse.data));
-};
-
 const campusReducer = (campus = {}, action) => {
   switch (action.type) {
     case SET_CAMPUS:
       return action.campus;
+
     default:
       return campus;
   }
