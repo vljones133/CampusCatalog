@@ -4,18 +4,17 @@ import AllCampuses from './AllCampuses';
 import AllStudents from './AllStudents';
 import Campus from './Campus';
 import Student from './Student';
+import CreateCampus from './CreateCampus';
 
 const Routes = () => {
   return (
     <Router>
       <div>
-        <div>
-          <nav>
-            <Link to="/">Welcome!</Link>
-            <Link to="/campuses">Campuses</Link>
-            <Link to="/students">Students</Link>
-          </nav>
-        </div>
+        <nav>
+          <Link to="/">Welcome!</Link>
+          <Link to="/campuses">Campuses</Link>
+          <Link to="/students">Students</Link>
+        </nav>
         <main>
           <Switch>
             <Route exact path="/">
@@ -30,6 +29,7 @@ const Routes = () => {
             <Route exact path="/students" component={AllStudents} />
             <Route path="/campuses/:id" component={Campus} />
             <Route path="/students/:id" component={Student} />
+            <Route path="/campuses/create" component={CreateCampus} />
           </Switch>
         </main>
       </div>

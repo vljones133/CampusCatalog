@@ -13,25 +13,30 @@ export class AllCampuses extends React.Component {
   render() {
     const { campuses } = this.props;
     return (
-      <div id="campuses" className="column">
-        {campuses.map((campus) => {
-          return (
-            <div className="campus" key={campus.id}>
-              <div className="column">
-                <h3>
-                  <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
-                </h3>
-                <p>{campus.description}</p>
-                <p>{campus.address}</p>
+      <main>
+        <aside>
+          <Link to="/campuses/create">Create a New Campus</Link>
+        </aside>
+        <section id="campuses" className="column">
+          {campuses.map((campus) => {
+            return (
+              <div className="campus" key={campus.id}>
+                <div className="column">
+                  <h3>
+                    <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+                  </h3>
+                  <p>{campus.description}</p>
+                  <p>{campus.address}</p>
+                </div>
+                <div className="column">
+                  <img src={campus.imageUrl} alt="image of campus" />
+                </div>
+                <br />
               </div>
-              <div className="column">
-                <img src={campus.imageUrl} alt="image of campus" />
-              </div>
-              <br />
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </section>
+      </main>
     );
   }
 }
