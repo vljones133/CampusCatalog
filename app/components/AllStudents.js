@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchStudents } from '../redux/students';
+import { fetchStudents, deleteStudentThunk } from '../redux/students';
 import CreateStudent from './CreateStudent';
 import store from '../store';
 
