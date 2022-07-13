@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createCampusThunk } from '../store/singleCampus';
+import { createCampusThunk } from '../redux/campuses';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 

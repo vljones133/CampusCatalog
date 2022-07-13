@@ -16,7 +16,6 @@ const campusReducer = (campus = {}, action) => {
   switch (action.type) {
     case SET_CAMPUS:
       return action.campus;
-
     default:
       return campus;
   }

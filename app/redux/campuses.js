@@ -23,7 +23,7 @@ export const fetchCampuses = () => async (dispatch) => {
 
 export const createCampusThunk = (campus, history) => {
   return async (dispatch) => {
-    const { data: created } = await axios.post('/api/campuss', campus);
+    const { data: created } = await axios.post('/api/campuses', campus);
     dispatch(createCampus(created));
     history.push('/');
   };
