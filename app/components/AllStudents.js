@@ -28,11 +28,17 @@ export class AllStudents extends React.Component {
         </aside>
         <section id="students" className="column">
           {students.map((student) => {
-            console.log(`**********${student}**********`);
             return (
               <div className="student" key={student.id}>
                 <div className="column">
                   <h3>
+                    <button
+                      type="button"
+                      className="remove"
+                      onClick={() => this.props.deleteStudent(student.id)}
+                    >
+                      X
+                    </button>
                     <Link to={`/students/${student.id}`}>
                       {student.firstName} {student.lastName}
                     </Link>
@@ -60,6 +66,7 @@ const mapState = ({ students }) => ({
 
 const mapDispatch = (dispatch) => ({
   getStudents: () => dispatch(fetchStudents()),
+  deleteStudent: (student) => dispatch(deleteStudentThunk(student, history)),
 });
 
 export default connect(mapState, mapDispatch)(AllStudents);
