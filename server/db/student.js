@@ -26,7 +26,8 @@ module.exports = db.define('student', {
   },
   imageUrl: {
     type: Sequelize.STRING,
-    defaultValue: './grace-hopper-logo.jpeg',
+    defaultValue:
+      'https://yt3.ggpht.com/ytc/AKedOLSHqHJ6yWx-5-D0eVh7I1YXUmNOlP7aVYutQ6DS=s176-c-k-c0x00ffffff-no-rj',
   },
   gpa: {
     type: Sequelize.DECIMAL,
