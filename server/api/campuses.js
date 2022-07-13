@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:campusId', async (req, res, next) => {
   try {
-    const campus = await Campus.findAll({
+    const campus = await Campus.findOne({
       where: {
         id: req.params.campusId,
       },

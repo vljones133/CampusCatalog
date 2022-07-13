@@ -8,13 +8,13 @@ const setCampus = (campus) => ({
 });
 
 export const fetchCampus = (id) => async (dispatch) => {
-  const campusesResponse = await axios.get(`/api/campuses/${id}`);
-  dispatch(setCampus(campusesResponse.data));
+  const campusResponse = await axios.get(`/api/campuses/${id}`);
+  dispatch(setCampus(campusResponse.data));
 };
 
 export const updateCampus = (id, campus) => async (dispatch) => {
-  const campusesResponse = await axios.put(`/api/campuses/${id}`, campus);
-  dispatch(setCampus(campusesResponse.data));
+  const campusResponse = await axios.put(`/api/campuses/${id}`, campus);
+  dispatch(setCampus(campusResponse.data));
 };
 
 const campusReducer = (campus = {}, action) => {

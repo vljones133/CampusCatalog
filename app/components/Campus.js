@@ -18,7 +18,7 @@ class Campus extends React.Component {
     console.log(`**********CAMPUS: ${campus}**********`);
     console.dir(campus);
     const students = campus.students;
-    // console.log(`**********STUDENTS: ${students}**********`);
+    console.log(`**********STUDENTS: ${students}**********`);
     return (
       <div key={campus.id}>
         <img src={campus.imageUrl} />
@@ -27,7 +27,7 @@ class Campus extends React.Component {
         <p>{campus.description}</p>
         <h3>Student's Enrolled:</h3>
         <ul>
-          {students ? (
+          {students && students.length > 0 ? (
             students.map((student) => {
               return (
                 <li key={student.id}>
