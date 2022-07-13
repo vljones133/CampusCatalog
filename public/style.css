@@ -43,7 +43,8 @@ img {
   height: auto;
 }
 
-.listPage {
+.listPage,
+.singlePage {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -71,7 +72,8 @@ section {
   display: none;
 }
 
-#create-form {
+#create-form,
+#update-form {
   display: flex;
   flex-direction: column;
   padding: 30px;

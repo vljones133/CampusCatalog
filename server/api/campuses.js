@@ -16,12 +16,14 @@ router.get('/:campusId', async (req, res, next) => {
   try {
     const campus = await Campus.findOne({
       where: {
-        id: req.params.campusId,
+        id: +req.params.campusId,
       },
       include: Student,
     });
+    console.log(`**********EXPRESS GET**********`);
     res.send(campus);
   } catch (err) {
+    console.log(`**********EXPRESS GET ERROR**********`);
     next(err);
   }
 });
@@ -31,6 +33,19 @@ router.post('/', async (req, res, next) => {
     const campus = await Campus.create(req.body);
     res.send(campus);
   } catch (error) {
+    next(error);
+  }
+});
+
+router.put('/:id', async (req, res, next) => {
+  try {
+    const campus = await Campus.findByPk(req.params.id);
+    // res.send(await campus.update(req.body));
+    await campus.update(req.body);
+    console.log(`**********EXPRESS PUT**********`);
+    res.send(campus);
+  } catch (error) {
+    console.log(`**********EXPRESS PUT ERROR**********`);
     next(error);
   }
 });

@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const SET_CAMPUSES = 'SET_CAMPUSES';
 const CREATE_CAMPUS = 'CREATE_CAMPUS';
-const DELETE_CAMPUS = 'DELETE_CAMPUS';
 const UPDATE_CAMPUS = 'UPDATE_CAMPUS';
+const DELETE_CAMPUS = 'DELETE_CAMPUS';
 
 export const setCampuses = (campuses) => ({
   type: SET_CAMPUSES,
@@ -17,16 +17,16 @@ const createCampus = (campus) => {
   };
 };
 
-const deleteCampus = (campus) => {
+const updateCampus = (campus) => {
   return {
-    type: DELETE_CAMPUS,
+    type: UPDATE_CAMPUS,
     campus,
   };
 };
 
-const updateCampus = (campus) => {
+const deleteCampus = (campus) => {
   return {
-    type: UPDATE_CAMPUS,
+    type: DELETE_CAMPUS,
     campus,
   };
 };
@@ -48,18 +48,6 @@ export const createCampusThunk = (campus, history) => {
   };
 };
 
-export const deleteCampusThunk = (id, history) => {
-  return async (dispatch) => {
-    try {
-      const { data: campus } = await axios.delete(`/api/campuses/${id}`);
-      dispatch(deleteCampus(campus));
-      history.push('/campuses');
-    } catch (err) {
-      console.log(err.response);
-    }
-  };
-};
-
 export const updateCampusThunk = (campus, history) => {
   return async (dispatch) => {
     try {
@@ -68,6 +56,20 @@ export const updateCampusThunk = (campus, history) => {
         campus
       );
       dispatch(updateCampus(updated));
+      console.log(`**********UPDATE-CAMPUS-THUNK**********`);
+      history.push(`/campuses/${campus.id}`);
+    } catch (err) {
+      console.log(`**********UPDATE-CAMPUS-THUNK-ERROR**********`);
+      console.log(err.response.data);
+    }
+  };
+};
+
+export const deleteCampusThunk = (id, history) => {
+  return async (dispatch) => {
+    try {
+      const { data: campus } = await axios.delete(`/api/campuses/${id}`);
+      dispatch(deleteCampus(campus));
       history.push('/campuses');
     } catch (err) {
       console.log(err.response);

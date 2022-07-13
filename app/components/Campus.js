@@ -11,15 +11,21 @@ class Campus extends React.Component {
     this.props.getCampus(id);
   }
 
+  // unregisterStudent = (student, campus) => {
+  //   console.log(`**********UNREGISTER-STUDENT**********`);
+  //   this.setState({});
+  // };
+
   render() {
     const { campus } = this.props;
     const students = campus.students;
     return (
       <main className="singlePage">
         <aside>
-          <UpdateCampus store={store} />
+          {/* <UpdateCampus store={store} /> */}
+          <UpdateCampus campus={campus} />
         </aside>
-        <div key={campus.id}>
+        <section key={campus.id}>
           <img src={campus.imageUrl} alt="image of campus" />
           <h2>{campus.name}</h2>
           <p>{campus.address}</p>
@@ -30,6 +36,12 @@ class Campus extends React.Component {
               students.map((student) => {
                 return (
                   <li key={student.id}>
+                    {/* <button
+                      type="button"
+                      onClick={this.unregisterStudent(student, campus)}
+                    >
+                      Unregister
+                    </button> */}
                     <Link to={`/students/${student.id}`}>
                       {student.firstName} {student.lastName}
                     </Link>
@@ -40,7 +52,7 @@ class Campus extends React.Component {
               <p>Sorry, no students to see yet!</p>
             )}
           </ul>
-        </div>
+        </section>
       </main>
     );
   }
