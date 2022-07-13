@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStudents } from '../redux/students';
 import CreateStudent from './CreateStudent';
+import store from '../store';
 
 // Notice that we're exporting the AllStudents component twice. The named export
 // (below) is not connected to Redux, while the default export (at the very
@@ -23,10 +24,11 @@ export class AllStudents extends React.Component {
     return (
       <main className="listPage">
         <aside>
-          <CreateStudent />
+          <CreateStudent store={store} />
         </aside>
         <section id="students" className="column">
           {students.map((student) => {
+            console.log(`**********${student}**********`);
             return (
               <div className="student" key={student.id}>
                 <div className="column">

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCampuses } from '../redux/campuses';
 import CreateCampus from './CreateCampus';
+import store from '../store';
 
 // Notice that we're exporting the AllCampuses component twice. The named export
 // (below) is not connected to Redux, while the default export (at the very
@@ -23,7 +24,7 @@ export class AllCampuses extends React.Component {
     return (
       <main className="listPage">
         <aside>
-          <CreateCampus />
+          <CreateCampus store={store} />
         </aside>
         <section id="campuses" className="column">
           {campuses.map((campus) => {
@@ -52,8 +53,9 @@ export class AllCampuses extends React.Component {
   }
 }
 
-const mapState = ({ campuses }) => ({
+const mapState = ({ campuses, campus }) => ({
   campuses,
+  campus,
 });
 
 const mapDispatch = (dispatch) => ({
