@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchCampus, updateCampus } from '../redux/singleCampus';
 
 class Campus extends React.Component {
@@ -15,10 +16,7 @@ class Campus extends React.Component {
 
   render() {
     const { campus, updateCampus } = this.props;
-    console.log(`**********CAMPUS: ${campus}**********`);
-    console.dir(campus);
     const students = campus.students;
-    console.log(`**********STUDENTS: ${students}**********`);
     return (
       <div key={campus.id}>
         <img src={campus.imageUrl} />
@@ -31,7 +29,9 @@ class Campus extends React.Component {
             students.map((student) => {
               return (
                 <li key={student.id}>
-                  {student.firstName} {student.lastName}
+                  <Link to={`/students/${student.id}`}>
+                    {student.firstName} {student.lastName}
+                  </Link>
                 </li>
               );
             })

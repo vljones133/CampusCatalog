@@ -20,11 +20,9 @@ router.get('/:campusId', async (req, res, next) => {
       },
       include: Student,
     });
-    console.log(`*******EXPRESS ROUTER CAMPUSID+STUDENTS${campus}*****`);
-    console.dir(campus);
     res.send(campus);
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 });
 

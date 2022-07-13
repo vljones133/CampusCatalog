@@ -7,23 +7,22 @@ router.get('/', async (req, res, next) => {
   try {
     const students = await Student.findAll();
     res.send(students);
-  } catch (e) {
-    next(e);
+  } catch (err) {
+    next(err);
   }
 });
 
 router.get('/:studentId', async (req, res, next) => {
   try {
-    const student = await Student.findAll({
+    const student = await Student.findOne({
       where: {
-        studentId: req.params.studentId,
+        id: req.params.studentId,
       },
-      include: [Campus],
+      include: Campus,
     });
-    console.log(`*******EXPRESS ROUTER STUDENTID+STUDENTS${student}*****`);
     res.send(student);
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 });
 

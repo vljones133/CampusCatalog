@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchStudent, updateStudent } from '../redux/students';
+import { fetchStudent, updateStudent } from '../redux/singleStudent';
 
 class Student extends React.Component {
   componentDidMount() {
-    this.props.fetchStudent(this.props.match.params.id);
+    this.props.getStudent(this.props.match.params.id);
   }
 
   //   componentDidUpdate(prevProps) {
@@ -16,8 +16,7 @@ class Student extends React.Component {
 
   render() {
     const { student, updateStudent } = this.props;
-    const campus = student.getCampus();
-    console.log(`**********STUDENT_CAMPUS${campus}**********`);
+    const campus = student.campus;
     return (
       <div key={student.id}>
         <img src={student.imageUrl} />
@@ -25,9 +24,9 @@ class Student extends React.Component {
           {student.firstName} {student.lastName}
         </h2>
         <p>{student.email}</p>
-        <p>{student.gpa}</p>
+        <p>GPA: {student.gpa}</p>
         <p>
-          {student.campusId ? (
+          {campus ? (
             <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
           ) : (
             'Sorry, no campus to see yet!'

@@ -8,21 +8,21 @@ const setStudent = (student) => ({
 });
 
 export const fetchStudent = (id) => async (dispatch) => {
-  const studentsResponse = await axios.get(`/api/students/${id}`);
-  dispatch(setStudent(studentsResponse.data));
+  const studentResponse = await axios.get(`/api/students/${id}`);
+  dispatch(setStudent(studentResponse.data));
 };
 
 export const updateStudent = (id, student) => async (dispatch) => {
-  const studentsResponse = await axios.put(`/api/students/${id}`, student);
-  dispatch(setStudent(studentsResponse.data));
+  const studentResponse = await axios.put(`/api/students/${id}`, student);
+  dispatch(setStudent(studentResponse.data));
 };
 
-const studentReducer = (state = {}, action) => {
+const studentReducer = (student = {}, action) => {
   switch (action.type) {
     case SET_STUDENT:
       return action.student;
     default:
-      return state;
+      return student;
   }
 };
 
