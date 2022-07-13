@@ -28,7 +28,10 @@ router.get('/:campusId', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    res.status(201).send(await Campus.create(req.body));
+    const campus = await Campus.create(req.body);
+    console.log(`***********EXPRESS-CAMPUS: ${campus}`);
+    // res.status(201).send(await Campus.create(req.body));
+    res.send(campus);
   } catch (error) {
     next(error);
   }

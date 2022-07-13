@@ -7,12 +7,9 @@ class CreateCampus extends Component {
   constructor() {
     super();
     this.state = {
-      campusName: '',
+      name: '',
       address: '',
     };
-
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (evt) => {
@@ -27,19 +24,19 @@ class CreateCampus extends Component {
   };
 
   render() {
-    const { campusName, address } = this.state;
+    const { name, address } = this.state;
     const { handleSubmit, handleChange } = this;
 
     return (
       <form id="campus-form" onSubmit={handleSubmit}>
-        <label htmlFor="campusName">Campus Name:</label>
-        <input name="campusName" onChange={handleChange} value={campusName} />
+        <label htmlFor="name">Campus Name:</label>
+        <input name="name" onChange={handleChange} value={name} />
 
         <label htmlFor="address">address:</label>
         <input name="address" onChange={handleChange} value={address} />
 
         <button type="submit">Submit</button>
-        <Link to="/">Cancel</Link>
+        <Link to="/campuses">Cancel</Link>
       </form>
     );
   }

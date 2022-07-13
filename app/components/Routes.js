@@ -28,10 +28,10 @@ const Routes = () => {
             </Route>
             <Route exact path="/campuses" component={AllCampuses} />
             <Route exact path="/students" component={AllStudents} />
-            <Route path="/campuses/:id" component={Campus} />
-            <Route path="/students/:id" component={Student} />
             <Route path="/campuses/create" component={CreateCampus} />
             <Route path="/students/create" component={CreateStudent} />
+            <Route path="/campuses/:id" component={Campus} />
+            <Route path="/students/:id" component={Student} />
           </Switch>
         </main>
       </div>

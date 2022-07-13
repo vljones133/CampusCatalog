@@ -11,7 +11,7 @@ module.exports = db.define('campus', {
   },
   imageUrl: {
     type: Sequelize.STRING,
-    defaultValue: '.../public/grace-hopper-logo.jpeg',
+    defaultValue: './grace-hopper-logo.jpeg',
   },
   address: {
     type: Sequelize.STRING,

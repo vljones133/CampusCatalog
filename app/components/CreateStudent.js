@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createStudentThunk } from '../redux/singleStudent';
+import { createStudentThunk } from '../redux/students';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -7,13 +7,10 @@ class CreateStudent extends Component {
   constructor() {
     super();
     this.state = {
-      studentFirstName: '',
-      studentLastName: '',
-      studentEmail: '',
+      firstName: '',
+      lastName: '',
+      email: '',
     };
-
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (evt) => {
@@ -28,34 +25,22 @@ class CreateStudent extends Component {
   };
 
   render() {
-    const { studentFirstName, studentLastName, studentEmail } = this.state;
+    const { firstName, lastName, email } = this.state;
     const { handleSubmit, handleChange } = this;
 
     return (
       <form id="student-form" onSubmit={handleSubmit}>
-        <label htmlFor="studentFirstName">First Name:</label>
-        <input
-          name="studentFirstName"
-          onChange={handleChange}
-          value={studentFirstName}
-        />
+        <label htmlFor="firstName">First Name:</label>
+        <input name="firstName" onChange={handleChange} value={firstName} />
 
-        <label htmlFor="studentLastName">Last Name:</label>
-        <input
-          name="studentLastName"
-          onChange={handleChange}
-          value={studentLastName}
-        />
+        <label htmlFor="lastName">Last Name:</label>
+        <input name="lastName" onChange={handleChange} value={lastName} />
 
-        <label htmlFor="studentEmail">Email:</label>
-        <input
-          name="studentEmail"
-          onChange={handleChange}
-          value={studentEmail}
-        />
+        <label htmlFor="email">Email:</label>
+        <input name="email" onChange={handleChange} value={email} />
 
         <button type="submit">Submit</button>
-        <Link to="/">Cancel</Link>
+        <Link to="/students">Cancel</Link>
       </form>
     );
   }
