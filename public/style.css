@@ -6,6 +6,7 @@
 * {
   box-sizing: border-box;
   font-family: arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,4 +41,14 @@ main {
 img {
   max-width: 450px;
   height: auto;
+}
+
+#toTop {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.hidden {
+  display: none;
 }

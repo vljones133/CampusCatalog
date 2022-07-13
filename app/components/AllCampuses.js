@@ -10,7 +10,14 @@ export class AllCampuses extends React.Component {
   componentDidMount() {
     this.props.getCampuses();
   }
+
   render() {
+    const goToTop = () => {
+      document.body.scrollIntoView({
+        behavior: 'smooth',
+      });
+    };
+
     const { campuses } = this.props;
     return (
       <main>
@@ -36,6 +43,9 @@ export class AllCampuses extends React.Component {
             );
           })}
         </section>
+        <button id="toTop" type="button" onClick={goToTop}>
+          ^Top
+        </button>
       </main>
     );
   }
