@@ -32,6 +32,15 @@ export class AllCampuses extends React.Component {
               <div className="campus" key={campus.id}>
                 <div className="column">
                   <h3>
+                    <button
+                      type="button"
+                      className="remove"
+                      onClick={() =>
+                        this.props.deleteCampus(this.props.match.params.id)
+                      }
+                    >
+                      X
+                    </button>
                     <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
                   </h3>
                   <p>{campus.description}</p>
@@ -60,6 +69,7 @@ const mapState = ({ campuses, campus }) => ({
 
 const mapDispatch = (dispatch) => ({
   getCampuses: () => dispatch(fetchCampuses()),
+  deleteCampus: (todo) => dispatch(deleteCampus(todo, history)),
 });
 
 export default connect(mapState, mapDispatch)(AllCampuses);
