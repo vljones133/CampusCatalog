@@ -9,6 +9,7 @@ class CreateCampus extends Component {
     this.state = {
       name: '',
       address: '',
+      description: '',
     };
   }
 
@@ -21,19 +22,28 @@ class CreateCampus extends Component {
   handleSubmit = (evt) => {
     evt.preventDefault();
     this.props.createCampus({ ...this.state });
+    this.setState({
+      name: '',
+      address: '',
+      description: '',
+    });
   };
 
   render() {
-    const { name, address } = this.state;
+    const { name, address, description } = this.state;
     const { handleSubmit, handleChange } = this;
 
     return (
-      <form id="campus-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Campus Name:</label>
+      <form id="create-form" onSubmit={handleSubmit}>
+        <h3>Add a new campus here:</h3>
+        <label htmlFor="name">Name:</label>
         <input name="name" onChange={handleChange} value={name} />
 
-        <label htmlFor="address">address:</label>
+        <label htmlFor="address">Address:</label>
         <input name="address" onChange={handleChange} value={address} />
+
+        <label htmlFor="description">Description:</label>
+        <input name="description" onChange={handleChange} value={description} />
 
         <button type="submit">Submit</button>
         <Link to="/campuses">Cancel</Link>

@@ -13,7 +13,7 @@ class Campus extends React.Component {
     const students = campus.students;
     return (
       <div key={campus.id}>
-        <img src={campus.imageUrl} />
+        <img src={campus.imageUrl} alt="image of campus" />
         <h2>{campus.name}</h2>
         <p>{campus.address}</p>
         <p>{campus.description}</p>

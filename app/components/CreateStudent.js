@@ -10,6 +10,7 @@ class CreateStudent extends Component {
       firstName: '',
       lastName: '',
       email: '',
+      gpa: 0,
     };
   }
 
@@ -22,14 +23,21 @@ class CreateStudent extends Component {
   handleSubmit = (evt) => {
     evt.preventDefault();
     this.props.createStudent({ ...this.state });
+    this.setState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      gpa: 0,
+    });
   };
 
   render() {
-    const { firstName, lastName, email } = this.state;
+    const { firstName, lastName, email, gpa } = this.state;
     const { handleSubmit, handleChange } = this;
 
     return (
-      <form id="student-form" onSubmit={handleSubmit}>
+      <form id="create-form" onSubmit={handleSubmit}>
+        <h3>Add a new student here:</h3>
         <label htmlFor="firstName">First Name:</label>
         <input name="firstName" onChange={handleChange} value={firstName} />
 
@@ -38,6 +46,9 @@ class CreateStudent extends Component {
 
         <label htmlFor="email">Email:</label>
         <input name="email" onChange={handleChange} value={email} />
+
+        <label htmlFor="gpa">GPA:</label>
+        <input name="gpa" onChange={handleChange} value={gpa} />
 
         <button type="submit">Submit</button>
         <Link to="/students">Cancel</Link>

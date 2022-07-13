@@ -43,6 +43,24 @@ img {
   height: auto;
 }
 
+.listPage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+aside {
+  flex: 1;
+  flex-direction: column;
+  margin: 40px;
+}
+
+section {
+  flex: 3;
+  margin: 40px;
+}
+
 #toTop {
   position: fixed;
   right: 2rem;
@@ -51,4 +69,10 @@ img {
 
 .hidden {
   display: none;
+}
+
+#create-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
 }

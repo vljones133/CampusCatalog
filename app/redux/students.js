@@ -23,11 +23,11 @@ export const fetchStudents = () => async (dispatch) => {
 export const createStudentThunk = (student, history) => {
   return async (dispatch) => {
     try {
-      const { data: created } = await axios.post(`/api/students`, student);
-      dispatch(createStudent(created));
+      const response = await axios.post(`/api/students`, student);
+      dispatch(createStudent(response.data));
       history.push('/students');
     } catch (err) {
-      console.log(err.response.data);
+      console.log(err.response);
     }
   };
 };
