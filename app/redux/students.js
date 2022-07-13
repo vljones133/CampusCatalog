@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { SET_STUDENT } from './singleStudent';
 
 const SET_STUDENTS = 'SET_STUDENTS';
 const CREATE_STUDENT = 'CREATE_STUDENT';
@@ -23,9 +22,13 @@ export const fetchStudents = () => async (dispatch) => {
 
 export const createStudentThunk = (student, history) => {
   return async (dispatch) => {
-    const { data: created } = await axios.post('/api/students', student);
-    dispatch(createStudent(created));
-    history.push('/');
+    try {
+      const { data: created } = await axios.post(`/api/students`, student);
+      dispatch(createStudent(created));
+      history.push('/students');
+    } catch (err) {
+      console.log(err.response.data);
+    }
   };
 };
 
@@ -35,10 +38,6 @@ export default function studentsReducer(students = [], action) {
   switch (action.type) {
     case SET_STUDENTS:
       return action.students;
-    // case SET_STUDENT:
-    //   return student.map((student) => {
-    //     return student.id === action.student.id ? action.student : student;
-    //   });
     case CREATE_STUDENT:
       return [...students, action.student];
     default:

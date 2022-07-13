@@ -13,25 +13,30 @@ export class AllStudents extends React.Component {
   render() {
     const { students } = this.props;
     return (
-      <div id="students" className="column">
-        {students.map((student) => {
-          return (
-            <div className="student" key={student.id}>
-              <div className="column">
-                <h3>
-                  <Link to={`/students/${student.id}`}>
-                    {student.firstName} {student.lastName}
-                  </Link>
-                </h3>
+      <main>
+        <aside>
+          <Link to="/students/create">Create a New Student</Link>
+        </aside>
+        <section id="students" className="column">
+          {students.map((student) => {
+            return (
+              <div className="student" key={student.id}>
+                <div className="column">
+                  <h3>
+                    <Link to={`/students/${student.id}`}>
+                      {student.firstName} {student.lastName}
+                    </Link>
+                  </h3>
+                </div>
+                <div className="column">
+                  <img src={student.imageUrl} alt="image of student" />
+                </div>
+                <br />
               </div>
-              <div className="column">
-                <img src={student.imageUrl} alt="image of student" />
-              </div>
-              <br />
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </section>
+      </main>
     );
   }
 }

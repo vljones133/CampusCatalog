@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { SET_CAMPUS } from './singleCampus';
 
 const SET_CAMPUSES = 'SET_CAMPUSES';
 const CREATE_CAMPUS = 'CREATE_CAMPUS';

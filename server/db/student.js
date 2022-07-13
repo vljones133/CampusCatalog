@@ -26,7 +26,7 @@ module.exports = db.define('student', {
   },
   imageUrl: {
     type: Sequelize.STRING,
-    defaultValue: '.../public/grace-hopper-logo.jpeg',
+    defaultValue: './grace-hopper-logo.jpeg',
   },
   gpa: {
     type: Sequelize.DECIMAL,
