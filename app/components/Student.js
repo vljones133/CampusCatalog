@@ -5,7 +5,8 @@ import { fetchStudent, updateStudent } from '../redux/singleStudent';
 
 class Student extends React.Component {
   componentDidMount() {
-    this.props.getStudent(this.props.match.params.id);
+    const { id } = this.props.match.params;
+    this.props.getStudent(id);
   }
 
   render() {

@@ -5,7 +5,8 @@ import { fetchCampus } from '../redux/singleCampus';
 
 class Campus extends React.Component {
   componentDidMount() {
-    this.props.getCampus(this.props.match.params.id);
+    const { id } = this.props.match.params;
+    this.props.getCampus(id);
   }
 
   render() {

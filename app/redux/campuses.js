@@ -3,6 +3,7 @@ import axios from 'axios';
 const SET_CAMPUSES = 'SET_CAMPUSES';
 const CREATE_CAMPUS = 'CREATE_CAMPUS';
 const DELETE_CAMPUS = 'DELETE_CAMPUS';
+const UPDATE_CAMPUS = 'UPDATE_CAMPUS';
 
 export const setCampuses = (campuses) => ({
   type: SET_CAMPUSES,
@@ -19,6 +20,13 @@ const createCampus = (campus) => {
 const deleteCampus = (campus) => {
   return {
     type: DELETE_CAMPUS,
+    campus,
+  };
+};
+
+const updateCampus = (campus) => {
+  return {
+    type: UPDATE_CAMPUS,
     campus,
   };
 };
@@ -52,6 +60,21 @@ export const deleteCampusThunk = (id, history) => {
   };
 };
 
+export const updateCampusThunk = (campus, history) => {
+  return async (dispatch) => {
+    try {
+      const { data: updated } = await axios.put(
+        `/api/campuses/${campus.id}`,
+        campus
+      );
+      dispatch(updateCampus(updated));
+      history.push('/campuses');
+    } catch (err) {
+      console.log(err.response);
+    }
+  };
+};
+
 // Take a look at app/redux/index.js to see where this reducer is
 // added to the Redux store with combineReducers
 
@@ -63,6 +86,10 @@ export default function campusesReducer(campuses = [], action) {
       return [...campuses, action.campus];
     case DELETE_CAMPUS:
       return campuses.filter((campus) => campus.id !== action.campus.id);
+    case UPDATE_CAMPUS:
+      return campuses.map((campus) => {
+        return campus.id === action.campus.id ? action.campus : campus;
+      });
     default:
       return campuses;
   }
