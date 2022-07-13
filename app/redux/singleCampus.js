@@ -20,11 +20,10 @@ export const fetchCampus = (id) => async (dispatch) => {
   dispatch(setCampus(campusResponse.data));
 };
 
-export const updateCampusThunk = (campus, history) => {
+export const updateCampusThunk = (campus) => {
   return async (dispatch) => {
     try {
       const response = await axios.put(`/api/campuses/${campus.id}`, campus);
-
       dispatch(updateCampus(response.data));
     } catch (err) {
       console.log(err.response.data);
@@ -37,10 +36,7 @@ const campusReducer = (campus = {}, action) => {
     case SET_CAMPUS:
       return action.campus;
     case UPDATE_CAMPUS:
-      // return campuses.map((campus) => {
-      //   return campus.id === action.campus.id ? action.campus : campus;
-      // });
-      return action.campus;
+      return { ...campus, ...action.campus };
     default:
       return campus;
   }

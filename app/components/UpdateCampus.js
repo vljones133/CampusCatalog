@@ -7,26 +7,7 @@ import {
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-//stop students from getting deleted
 class UpdateCampus extends Component {
-  // componentDidMount() {
-  //   try {
-  //     const { campus } = this.props;
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  componentWillUnmount() {
-    this.props.clearCampus();
-  }
-
-  componentDidUpdate(prevProps) {
-    // if (prevProps.campus.id !== this.props.campus.id) {
-    //   this.props.getCampus(this.props.campus.id);
-    // }
-  }
-
   handleChange = (evt) => {
     this.setState({
       [evt.target.name]: evt.target.value,

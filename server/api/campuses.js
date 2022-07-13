@@ -38,12 +38,9 @@ router.post('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const campus = await Campus.findByPk(req.params.id);
-    // res.send(await campus.update(req.body));
     await campus.update(req.body);
-    console.log(`**********EXPRESS PUT**********`);
     res.send(campus);
   } catch (error) {
-    console.log(`**********EXPRESS PUT ERROR**********`);
     next(error);
   }
 });
