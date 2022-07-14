@@ -4,10 +4,24 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class UpdateCampus extends Component {
-  // componentDidMount() {
-  //   const { id } = this.props.match.params;
-  //   this.props.getCampus(id);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: props.campus.name,
+      address: props.campus.address,
+      description: props.campus.description,
+    };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.campus.id !== this.props.campus.id) {
+      this.setState({
+        name: this.props.campus.name || '',
+        address: this.props.campus.address || '',
+        description: this.props.campus.description || '',
+      });
+    }
+  }
 
   handleChange = (evt) => {
     this.setState({
@@ -17,7 +31,9 @@ class UpdateCampus extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
+
     this.props.updateCampus({ ...this.props.campus, ...this.state });
+
     const form = document.getElementById('update-form');
     form.childNodes.forEach((input) => {
       input.value = '';
@@ -25,24 +41,20 @@ class UpdateCampus extends Component {
   };
 
   render() {
-    const { name, address, description } = this.props.campus;
+    const { name, address, description } = this.state;
     const { handleSubmit, handleChange } = this;
 
     return (
       <form id="update-form" onSubmit={handleSubmit}>
         <h3>Update campus here:</h3>
         <label htmlFor="name">Name:</label>
-        <input name="name" onChange={handleChange} defaultValue={name} />
+        <input name="name" onChange={handleChange} value={name} />
 
         <label htmlFor="address">Address:</label>
-        <input name="address" onChange={handleChange} defaultValue={address} />
+        <input name="address" onChange={handleChange} value={address} />
 
         <label htmlFor="description">Description:</label>
-        <input
-          name="description"
-          onChange={handleChange}
-          defaultValue={description}
-        />
+        <input name="description" onChange={handleChange} value={description} />
 
         <button type="submit">Submit</button>
         <Link to="/campuses">Cancel</Link>
