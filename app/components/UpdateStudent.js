@@ -45,17 +45,13 @@ class UpdateStudent extends Component {
         />
 
         <label htmlFor="email">Email:</label>
-        <input
-          name="addemailress"
-          onChange={handleChange}
-          defaultValue={email}
-        />
+        <input name="email" onChange={handleChange} defaultValue={email} />
 
         <label htmlFor="gpa">GPA:</label>
         <input name="gpa" onChange={handleChange} defaultValue={gpa} />
 
         <button type="submit">Submit</button>
-        <Link to="/studentes">Cancel</Link>
+        <Link to="/students">Cancel</Link>
       </form>
     );
   }
@@ -67,8 +63,6 @@ const mapStateToProps = ({ student }) => ({
 
 const mapDispatchToProps = (dispatch, { history }) => ({
   updateStudent: (student) => dispatch(updateStudentThunk(student, history)),
-  getStudent: (id) => dispatch(fetchStudent(id)),
-  clearStudent: () => dispatch(setStudent({})),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UpdateStudent);

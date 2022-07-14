@@ -68,7 +68,6 @@ const mapStateToProps = ({ campus }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
-  // updateCampus: (id, campus) => dispatch(updateCampusThunk(id, campus)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campus);

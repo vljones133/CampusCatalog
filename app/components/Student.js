@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { fetchStudent } from '../redux/singleStudent';
 import UpdateStudent from './UpdateStudent';
 
-//update page to show changes
 class Student extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
@@ -51,7 +50,6 @@ const mapStateToProps = ({ student }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getStudent: (id) => dispatch(fetchStudent(id)),
-  // updateStudent: (id, student) => dispatch(updateStudent(id, student)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Student);
