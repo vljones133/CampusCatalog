@@ -22,7 +22,8 @@ class Student extends React.Component {
     return (
       <main className="singlePage">
         <aside>
-          <UpdateStudent student={student} />
+          {/* <UpdateStudent student={student} /> */}
+          <UpdateStudent />
         </aside>
         <section key={student.id}>
           <img src={student.imageUrl} />

@@ -31,7 +31,8 @@ class Campus extends React.Component {
     return (
       <main className="singlePage">
         <aside>
-          <UpdateCampus campus={campus} />
+          {/* <UpdateCampus campus={campus} /> */}
+          <UpdateCampus />
         </aside>
         <section key={campus.id}>
           <img src={campus.imageUrl} alt="image of campus" />
