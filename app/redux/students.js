@@ -52,8 +52,6 @@ export const deleteStudentThunk = (id, history) => {
   };
 };
 
-// Take a look at app/redux/index.js to see where this reducer is
-// added to the Redux store with combineReducers
 export default function studentsReducer(students = [], action) {
   switch (action.type) {
     case SET_STUDENTS:

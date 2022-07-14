@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import AllCampuses from './AllCampuses';
 import AllStudents from './AllStudents';
-import Campus from './Campus';
-import Student from './Student';
+import SingleCampus from './SingleCampus';
+import SingleStudent from './SingleStudent';
 import CreateCampus from './CreateCampus';
 import CreateStudent from './CreateStudent';
 
@@ -30,8 +30,8 @@ const Routes = () => {
             <Route exact path="/students" component={AllStudents} />
             <Route path="/campuses/create" component={CreateCampus} />
             <Route path="/students/create" component={CreateStudent} />
-            <Route path="/campuses/:id" component={Campus} />
-            <Route path="/students/:id" component={Student} />
+            <Route path="/campuses/:id" component={SingleCampus} />
+            <Route path="/students/:id" component={SingleStudent} />
           </Switch>
         </main>
       </div>

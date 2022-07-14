@@ -1,13 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deleteCampusThunk, fetchCampuses } from '../redux/campuses';
+import { fetchCampuses, deleteCampusThunk } from '../redux/campuses';
 import CreateCampus from './CreateCampus';
 import store from '../store';
 
-// Notice that we're exporting the AllCampuses component twice. The named export
-// (below) is not connected to Redux, while the default export (at the very
-// bottom) is connected to Redux. Our tests should cover _both_ cases.
 export class AllCampuses extends React.Component {
   componentDidMount() {
     this.props.getCampuses();

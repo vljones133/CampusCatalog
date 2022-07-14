@@ -5,9 +5,6 @@ import { fetchStudents, deleteStudentThunk } from '../redux/students';
 import CreateStudent from './CreateStudent';
 import store from '../store';
 
-// Notice that we're exporting the AllStudents component twice. The named export
-// (below) is not connected to Redux, while the default export (at the very
-// bottom) is connected to Redux. Our tests should cover _both_ cases.
 export class AllStudents extends React.Component {
   componentDidMount() {
     this.props.getStudents();

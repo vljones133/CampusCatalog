@@ -2,7 +2,6 @@ import axios from 'axios';
 
 export const SET_STUDENT = 'SET_STUDENT';
 export const UPDATE_STUDENT = 'UPDATE_STUDENT';
-// const UNREGISTER_STUDENT = 'UNREGISTER_STUDENT';
 
 const setStudent = (student) => ({
   type: SET_STUDENT,
@@ -22,15 +21,11 @@ export const fetchStudent = (id) => async (dispatch) => {
 };
 
 export const updateStudentThunk = (student) => {
-  console.log(`**********THUNK STUDENT: ${student}`);
-  console.dir(student);
   return async (dispatch) => {
     try {
       const response = await axios.put(`/api/students/${student.id}`, student);
-      console.log(`**********UPDATE STUDENT THUNK: ${response.data}`);
       dispatch(updateStudent(response.data));
     } catch (err) {
-      console.log(`**********UPDATE STUDENT THUNK ERROR: ${err.response.data}`);
       console.log(err.response.data);
     }
   };

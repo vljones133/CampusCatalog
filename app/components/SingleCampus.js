@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchCampus, updateCampusThunk } from '../redux/singleCampus';
+import { fetchCampus } from '../redux/singleCampus';
 import { updateStudentThunk } from '../redux/singleStudent';
 import UpdateCampus from './UpdateCampus';
 
@@ -31,7 +31,6 @@ class Campus extends React.Component {
     return (
       <main className="singlePage">
         <aside>
-          {/* <UpdateCampus campus={campus} /> */}
           <UpdateCampus />
         </aside>
         <section key={campus.id}>
@@ -73,9 +72,7 @@ const mapStateToProps = ({ campus }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
-  // unregisterStudent: (student) => dispatch(unregisterStudentThunk(student)),
   updateStudent: (student) => dispatch(updateStudentThunk(student)),
-  updateCampus: (campus) => dispatch(updateCampusThunk(campus)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campus);

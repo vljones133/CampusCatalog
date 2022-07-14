@@ -6,17 +6,10 @@ const db = require('./database');
 const Student = require('./Student');
 const Campus = require('./Campus');
 
-// This is a great place to establish associations between your models
-// (https://sequelize-guides.netlify.com/association-types/).
-// Example:
-//
-// Puppy.belongsTo(Owner)
-
 Student.belongsTo(Campus);
 Campus.hasMany(Student);
 
 module.exports = {
-  // Include your models in this exports object as well!
   db,
   Student,
   Campus,

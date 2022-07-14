@@ -19,10 +19,10 @@ class Student extends React.Component {
   render() {
     const { student } = this.props;
     const campus = student.campus;
+
     return (
       <main className="singlePage">
         <aside>
-          {/* <UpdateStudent student={student} /> */}
           <UpdateStudent />
         </aside>
         <section key={student.id}>

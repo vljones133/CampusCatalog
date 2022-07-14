@@ -30,22 +30,18 @@ router.post('/', async (req, res, next) => {
   try {
     const campus = await Campus.create(req.body);
     res.send(campus);
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 });
 
 router.put('/:id', async (req, res, next) => {
   try {
     const campus = await Campus.findByPk(req.params.id);
-    console.log(`**********EXPRESS CAMPUS BEFORE UPDATE`);
-    console.dir(campus);
     await campus.update(req.body);
-    console.log(`**********EXPRESS CAMPUS AFTER UPDATE`);
-    console.dir(campus);
     res.send(campus);
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 });
 
@@ -54,8 +50,8 @@ router.delete('/:id', async (req, res, next) => {
     const campus = await Campus.findByPk(req.params.id);
     await campus.destroy();
     res.send(campus);
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 });
 
