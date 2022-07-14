@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { updateCampusThunk, fetchCampus } from '../redux/singleCampus';
+import { fetchCampus } from '../redux/singleCampus';
 import UpdateCampus from './UpdateCampus';
 
 class Campus extends React.Component {
@@ -68,7 +68,7 @@ const mapStateToProps = ({ campus }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
-  updateCampus: (id, campus) => dispatch(updateCampusThunk(id, campus)),
+  // updateCampus: (id, campus) => dispatch(updateCampusThunk(id, campus)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campus);
