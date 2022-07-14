@@ -26,22 +26,6 @@ class Campus extends React.Component {
         ...student,
         campusId: null,
       });
-      console.log(`**********BEFORE FILTER: ${campus.students}`);
-      console.dir(campus.students);
-
-      const filteredStudents = campus.students.filter(
-        (prevStudent) => prevStudent.id !== student.id
-      );
-
-      console.log(`**********AFTER FILTER: ${filteredStudents}`);
-      console.dir(filteredStudents);
-
-      this.props.updateCampus({
-        ...campus,
-        students: campus.students.filter(
-          (prevStudent) => prevStudent.id !== student.id
-        ),
-      });
     };
 
     return (
@@ -90,7 +74,7 @@ const mapDispatchToProps = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
   // unregisterStudent: (student) => dispatch(unregisterStudentThunk(student)),
   updateStudent: (student) => dispatch(updateStudentThunk(student)),
-  updateCampus: (student) => dispatch(updateCampusThunk(student)),
+  updateCampus: (campus) => dispatch(updateCampusThunk(campus)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campus);

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { UPDATE_STUDENT } from './singleStudent';
 
 export const SET_CAMPUS = 'SET_CAMPUS';
 const UPDATE_CAMPUS = 'UPDATE_CAMPUS';
@@ -21,22 +22,35 @@ export const fetchCampus = (id) => async (dispatch) => {
 };
 
 export const updateCampusThunk = (campus) => {
+  console.log(`***THUNK CAMPUS: ${campus.students.length}`);
+  console.dir(campus);
   return async (dispatch) => {
     try {
       const response = await axios.put(`/api/campuses/${campus.id}`, campus);
+      console.log(`***UPDATE CAMPUS THUNK: ${response.data}`);
+      console.dir(response.data);
       dispatch(updateCampus(response.data));
     } catch (err) {
-      console.log(err.response.data);
+      console.log(`***UPDATE CAMPUS THUNK ERROR: ${err.response}`);
+      console.log(err.response);
     }
   };
 };
 
 const campusReducer = (campus = {}, action) => {
+  console.log(`******CAMPUS REDUCER*****`, action);
   switch (action.type) {
     case SET_CAMPUS:
       return action.campus;
     case UPDATE_CAMPUS:
       return { ...campus, ...action.campus };
+    case UPDATE_STUDENT:
+      return {
+        ...campus,
+        students: campus.students.filter(
+          (student) => student.id !== action.student.id
+        ),
+      };
     default:
       return campus;
   }
