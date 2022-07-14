@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class UpdateCampus extends Component {
+  // componentDidMount() {
+  //   const { id } = this.props.match.params;
+  //   this.props.getCampus(id);
+  // }
+
   handleChange = (evt) => {
     this.setState({
       [evt.target.name]: evt.target.value,

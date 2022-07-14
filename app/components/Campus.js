@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchCampus } from '../redux/singleCampus';
+import { fetchCampus, updateCampusThunk } from '../redux/singleCampus';
+import { updateStudentThunk } from '../redux/singleStudent';
 import UpdateCampus from './UpdateCampus';
 
 class Campus extends React.Component {
@@ -16,14 +17,33 @@ class Campus extends React.Component {
     }
   }
 
-  // unregisterStudent = (student, campus) => {
-  //   console.log(`**********UNREGISTER-STUDENT**********`);
-  //   this.setState({});
-  // };
-
   render() {
     const { campus } = this.props;
     const students = campus.students;
+
+    const unregisterStudent = (student) => {
+      this.props.updateStudent({
+        ...student,
+        campusId: null,
+      });
+      console.log(`**********BEFORE FILTER: ${campus.students}`);
+      console.dir(campus.students);
+
+      const filteredStudents = campus.students.filter(
+        (prevStudent) => prevStudent.id !== student.id
+      );
+
+      console.log(`**********AFTER FILTER: ${filteredStudents}`);
+      console.dir(filteredStudents);
+
+      this.props.updateCampus({
+        ...campus,
+        students: campus.students.filter(
+          (prevStudent) => prevStudent.id !== student.id
+        ),
+      });
+    };
+
     return (
       <main className="singlePage">
         <aside>
@@ -40,12 +60,12 @@ class Campus extends React.Component {
               students.map((student) => {
                 return (
                   <li key={student.id}>
-                    {/* <button
+                    <button
                       type="button"
-                      onClick={this.unregisterStudent(student, campus)}
+                      onClick={() => unregisterStudent(student, campus)}
                     >
                       Unregister
-                    </button> */}
+                    </button>
                     <Link to={`/students/${student.id}`}>
                       {student.firstName} {student.lastName}
                     </Link>
@@ -68,6 +88,9 @@ const mapStateToProps = ({ campus }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
+  // unregisterStudent: (student) => dispatch(unregisterStudentThunk(student)),
+  updateStudent: (student) => dispatch(updateStudentThunk(student)),
+  updateCampus: (student) => dispatch(updateCampusThunk(student)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campus);

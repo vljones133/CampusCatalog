@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import {
-  fetchStudent,
-  setStudent,
-  updateStudentThunk,
-} from '../redux/singleStudent';
+import { updateStudentThunk } from '../redux/singleStudent';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
