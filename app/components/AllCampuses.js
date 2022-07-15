@@ -42,8 +42,8 @@ export class AllCampuses extends React.Component {
                 </button>
                 <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
               </h3>
-              <p>{campus.description}</p>
               <p>{campus.address}</p>
+              <p>{campus.description}</p>
             </div>
             <div className="column">
               <img src={campus.imageUrl} alt="image of campus" />
