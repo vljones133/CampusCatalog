@@ -178,8 +178,9 @@ describe('Tier One: Campuses', () => {
         testStore = createStore(rootReducer);
       });
 
-      xit('*** returns the initial state by default', () => {
-        throw new Error('replace this error with your own test');
+      it('*** returns the initial state by default', () => {
+        expect(testStore.getState().campuses).to.be.an('array');
+        expect(testStore.getState().campus).to.be.an('object');
       });
 
       it('reduces on SET_CAMPUSES action', () => {
@@ -318,8 +319,15 @@ describe('Tier One: Campuses', () => {
       );
     });
 
-    xit('*** requires name and address', async () => {
-      throw new Error('replace this error with your own test');
+    it('*** requires name and address', async () => {
+      const campus = Campus.build();
+      try {
+        await campus.validate();
+        throw Error('validation should have failed without name, address');
+      } catch (err) {
+        expect(err.message).to.contain('name cannot be null');
+        expect(err.message).to.contain('address cannot be null');
+      }
     });
 
     it('name and address cannot be empty', async () => {

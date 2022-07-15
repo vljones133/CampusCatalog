@@ -25,6 +25,9 @@ import store from '../../app/store';
 import rootReducer from '../../app/redux';
 import { createStore } from 'redux';
 
+const app = require('../../server');
+const agent = require('supertest')(app);
+
 const { db, Student } = require('../../server/db');
 
 const seed = require('../../seed');
@@ -160,8 +163,9 @@ describe('Tier One: Students', () => {
         testStore = createStore(rootReducer);
       });
 
-      xit('*** returns the initial state by default', () => {
-        throw new Error('replace this error with your own test');
+      it('*** returns the initial state by default', () => {
+        expect(testStore.getState().students).to.be.an('array');
+        expect(testStore.getState().student).to.be.an('object');
       });
 
       it('reduces on SET_STUDENTS action', () => {
@@ -262,8 +266,21 @@ describe('Tier One: Students', () => {
       Student.findAll = studentFindAll;
     });
 
-    xit('*** GET /api/students responds with all students', async () => {
-      throw new Error('replace this error with your own test');
+    it('*** GET /api/students responds with all students', async () => {
+      const response = await agent.get('/api/students').expect(200);
+      expect(response.body).to.deep.equal([
+        {
+          id: 1,
+          firstName: 'Mae',
+          lastName: 'Jemison',
+        },
+        {
+          id: 2,
+          firstName: 'Sally',
+          lastName: 'Ride',
+        },
+      ]);
+      expect(Student.findAll.calledOnce).to.be.equal(true);
     });
   });
 

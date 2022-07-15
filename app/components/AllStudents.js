@@ -24,6 +24,7 @@ export class AllStudents extends React.Component {
           <CreateStudent store={store} />
         </aside>
         <section id="students" className="column">
+          students ?
           {students.map((student) => {
             return (
               <div className="student" key={student.id}>
@@ -47,7 +48,8 @@ export class AllStudents extends React.Component {
                 <br />
               </div>
             );
-          })}
+          })}{' '}
+          : <h3>No Students</h3>
         </section>
         <button id="toTop" type="button" onClick={goToTop}>
           ^Top
