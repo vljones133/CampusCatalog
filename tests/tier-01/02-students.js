@@ -335,8 +335,16 @@ describe('Tier One: Students', () => {
       }
     });
 
-    xit('*** email must be a valid email', async () => {
-      throw new Error('replace this error with your own test');
+    it('*** email must be a valid email', async () => {
+      const student = Student.build({
+        email: '',
+      });
+      try {
+        await student.validate();
+        throw Error('validation should have failed with invalid email address');
+      } catch (err) {
+        expect(err.message).to.contain('Validation isEmail on email');
+      }
     });
 
     it('gpa must be a float between 0.0 and 4.0', async () => {

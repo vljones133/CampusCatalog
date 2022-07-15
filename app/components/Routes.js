@@ -6,6 +6,7 @@ import SingleCampus from './SingleCampus';
 import SingleStudent from './SingleStudent';
 import CreateCampus from './CreateCampus';
 import CreateStudent from './CreateStudent';
+import NotFound from './NotFound';
 
 const Routes = () => {
   return (
@@ -32,6 +33,7 @@ const Routes = () => {
             <Route path="/students/create" component={CreateStudent} />
             <Route path="/campuses/:id" component={SingleCampus} />
             <Route path="/students/:id" component={SingleStudent} />
+            <Route component={NotFound} />
           </Switch>
         </main>
       </div>
