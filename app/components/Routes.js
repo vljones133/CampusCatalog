@@ -31,12 +31,16 @@ const Routes = () => {
             </Route>
             <Route exact path="/campuses" component={AllCampuses} />
             <Route exact path="/students" component={AllStudents} />
+
             <Route path="/campuses/create" component={CreateCampus} />
             <Route path="/students/create" component={CreateStudent} />
-            <Route path="/campuses/*" component={CampusNotFound} />
-            <Route path="/students/*" component={StudentNotFound} />
-            <Route path="/campuses/:id" component={SingleCampus} />
-            <Route path="/students/:id" component={SingleStudent} />
+
+            <Route exact path="/campuses/:id" component={SingleCampus} />
+            <Route exact path="/students/:id" component={SingleStudent} />
+
+            {/* <Route path="/campuses/*" component={CampusNotFound} />
+            <Route path="/students/*" component={StudentNotFound} /> */}
+
             <Route component={NotFound} />
           </Switch>
         </main>

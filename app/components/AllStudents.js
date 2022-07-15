@@ -6,9 +6,37 @@ import CreateStudent from './CreateStudent';
 import store from '../store';
 
 export class AllStudents extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { students: this.props.students };
+  //   console.log(`**********STUDENTS:`, this.props.students);
+  // }
+
   componentDidMount() {
     this.props.getStudents();
   }
+
+  sortStudents = (type) => {
+    const types = {
+      lastName: 'lastName',
+      gpa: 'gpa',
+    };
+    const sortProperty = types[type];
+
+    if (sortProperty === 'lastName') {
+      this.setState({
+        ...this.props.students.sort((a, b) => {
+          return a.lastName > b.lastName ? 1 : b.lastName > a.lastName ? -1 : 0;
+        }),
+      });
+    } else {
+      this.setState({
+        ...this.props.students.sort(
+          (a, b) => b[sortProperty] - a[sortProperty]
+        ),
+      });
+    }
+  };
 
   render() {
     const goToTop = () => {
@@ -18,6 +46,7 @@ export class AllStudents extends React.Component {
     };
 
     const { students } = this.props;
+
     return (
       <main className="listPage">
         <aside>
@@ -25,6 +54,16 @@ export class AllStudents extends React.Component {
         </aside>
         <section id="students" className="column">
           students ?
+          <select
+            defaultValue="DEFAULT"
+            onChange={(e) => this.sortStudents(e.target.value)}
+          >
+            <option value="DEFAULT" disabled>
+              None
+            </option>
+            <option value="lastName">Last name</option>
+            <option value="gpa">GPA</option>
+          </select>
           {students.map((student) => {
             return (
               <div className="student" key={student.id}>
@@ -48,7 +87,7 @@ export class AllStudents extends React.Component {
                 <br />
               </div>
             );
-          })}{' '}
+          })}
           : <h3>No Students</h3>
         </section>
         <button id="toTop" type="button" onClick={goToTop}>

@@ -48,7 +48,7 @@ export class AllCampuses extends React.Component {
                 <br />
               </div>
             );
-          })}{' '}
+          })}
           : <h3>No Campuses</h3>
         </section>
         <button id="toTop" type="button" onClick={goToTop}>
