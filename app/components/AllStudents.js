@@ -85,6 +85,7 @@ export class AllStudents extends React.Component {
         <section id="students" className="column">
           {students ? (
             <div>
+              <p>Sort by:</p>
               <select
                 defaultValue="DEFAULT"
                 onChange={(e) => this.sortStudents(e.target.value)}

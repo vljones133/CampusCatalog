@@ -26,6 +26,34 @@ export class AllCampuses extends React.Component {
     };
 
     const { campuses } = this.props;
+
+    const MapCampuses = () => {
+      return campuses.map((campus) => {
+        return (
+          <div className="campus" key={campus.id}>
+            <div className="column">
+              <h3>
+                <button
+                  type="button"
+                  className="remove"
+                  onClick={() => this.props.deleteCampus(campus.id)}
+                >
+                  X
+                </button>
+                <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+              </h3>
+              <p>{campus.description}</p>
+              <p>{campus.address}</p>
+            </div>
+            <div className="column">
+              <img src={campus.imageUrl} alt="image of campus" />
+            </div>
+            <br />
+          </div>
+        );
+      });
+    };
+
     return (
       <main className="listPage">
         {this.state.loading && <h1>Loading...</h1>}
@@ -33,32 +61,7 @@ export class AllCampuses extends React.Component {
           <CreateCampus store={store} />
         </aside>
         <section id="campuses" className="column">
-          campuses ?
-          {campuses.map((campus) => {
-            return (
-              <div className="campus" key={campus.id}>
-                <div className="column">
-                  <h3>
-                    <button
-                      type="button"
-                      className="remove"
-                      onClick={() => this.props.deleteCampus(campus.id)}
-                    >
-                      X
-                    </button>
-                    <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
-                  </h3>
-                  <p>{campus.description}</p>
-                  <p>{campus.address}</p>
-                </div>
-                <div className="column">
-                  <img src={campus.imageUrl} alt="image of campus" />
-                </div>
-                <br />
-              </div>
-            );
-          })}
-          : <h3>No Campuses</h3>
+          {campuses ? <MapCampuses /> : <h3>No Campuses</h3>}
         </section>
         <button id="toTop" type="button" onClick={goToTop}>
           ^Top
