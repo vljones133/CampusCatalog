@@ -6,8 +6,16 @@ import CreateCampus from './CreateCampus';
 import store from '../store';
 
 export class AllCampuses extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
+  }
+
   componentDidMount() {
     this.props.getCampuses();
+    this.setState({ loading: false });
   }
 
   render() {
@@ -20,6 +28,7 @@ export class AllCampuses extends React.Component {
     const { campuses } = this.props;
     return (
       <main className="listPage">
+        {this.state.loading && <h1>Loading...</h1>}
         <aside>
           <CreateCampus store={store} />
         </aside>

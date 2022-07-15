@@ -77,7 +77,8 @@ export class AllStudents extends React.Component {
 
     return (
       <main className="listPage">
-        {this.state.loading && <h1>Loading</h1>}
+        {this.state.loading && <h1>Loading...</h1>}
+
         <aside>
           <CreateStudent store={store} />
         </aside>
