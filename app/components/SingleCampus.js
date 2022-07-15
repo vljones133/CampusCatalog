@@ -29,7 +29,7 @@ class Campus extends React.Component {
       });
     };
 
-    if (campus.name) {
+    if (campus) {
       return (
         <main className="singlePage">
           <aside>

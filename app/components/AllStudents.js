@@ -6,14 +6,16 @@ import CreateStudent from './CreateStudent';
 import store from '../store';
 
 export class AllStudents extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { students: this.props.students };
-  //   console.log(`**********STUDENTS:`, this.props.students);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
+  }
 
   componentDidMount() {
     this.props.getStudents();
+    this.setState({ loading: false });
   }
 
   sortStudents = (type) => {
@@ -22,18 +24,17 @@ export class AllStudents extends React.Component {
       gpa: 'gpa',
     };
     const sortProperty = types[type];
+    const { students } = this.props;
 
     if (sortProperty === 'lastName') {
       this.setState({
-        ...this.props.students.sort((a, b) => {
+        ...students.sort((a, b) => {
           return a.lastName > b.lastName ? 1 : b.lastName > a.lastName ? -1 : 0;
         }),
       });
     } else {
       this.setState({
-        ...this.props.students.sort(
-          (a, b) => b[sortProperty] - a[sortProperty]
-        ),
+        ...students.sort((a, b) => b[sortProperty] - a[sortProperty]),
       });
     }
   };
@@ -47,48 +48,57 @@ export class AllStudents extends React.Component {
 
     const { students } = this.props;
 
+    const MapStudents = () => {
+      return students.map((student) => {
+        return (
+          <div className="student" key={student.id}>
+            <div className="column">
+              <h3>
+                <button
+                  type="button"
+                  className="remove"
+                  onClick={() => this.props.deleteStudent(student.id)}
+                >
+                  X
+                </button>
+                <Link to={`/students/${student.id}`}>
+                  {student.firstName} {student.lastName}
+                </Link>
+              </h3>
+            </div>
+            <div className="column">
+              <img src={student.imageUrl} alt="image of student" />
+            </div>
+            <br />
+          </div>
+        );
+      });
+    };
+
     return (
       <main className="listPage">
+        {this.state.loading && <h1>Loading</h1>}
         <aside>
           <CreateStudent store={store} />
         </aside>
         <section id="students" className="column">
-          students ?
-          <select
-            defaultValue="DEFAULT"
-            onChange={(e) => this.sortStudents(e.target.value)}
-          >
-            <option value="DEFAULT" disabled>
-              None
-            </option>
-            <option value="lastName">Last name</option>
-            <option value="gpa">GPA</option>
-          </select>
-          {students.map((student) => {
-            return (
-              <div className="student" key={student.id}>
-                <div className="column">
-                  <h3>
-                    <button
-                      type="button"
-                      className="remove"
-                      onClick={() => this.props.deleteStudent(student.id)}
-                    >
-                      X
-                    </button>
-                    <Link to={`/students/${student.id}`}>
-                      {student.firstName} {student.lastName}
-                    </Link>
-                  </h3>
-                </div>
-                <div className="column">
-                  <img src={student.imageUrl} alt="image of student" />
-                </div>
-                <br />
-              </div>
-            );
-          })}
-          : <h3>No Students</h3>
+          {students ? (
+            <div>
+              <select
+                defaultValue="DEFAULT"
+                onChange={(e) => this.sortStudents(e.target.value)}
+              >
+                <option value="DEFAULT" disabled>
+                  None
+                </option>
+                <option value="lastName">Last name</option>
+                <option value="gpa">GPA</option>
+              </select>
+              <MapStudents />
+            </div>
+          ) : (
+            <h3>No Students</h3>
+          )}
         </section>
         <button id="toTop" type="button" onClick={goToTop}>
           ^Top

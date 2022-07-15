@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStudent } from '../redux/singleStudent';
 import UpdateStudent from './UpdateStudent';
+import StudentNotFound from './StudentNotFound';
 
 class Student extends React.Component {
   componentDidMount() {
@@ -20,28 +21,32 @@ class Student extends React.Component {
     const { student } = this.props;
     const campus = student.campus;
 
-    return (
-      <main className="singlePage">
-        <aside>
-          <UpdateStudent />
-        </aside>
-        <section key={student.id}>
-          <img src={student.imageUrl} />
-          <h2>
-            {student.firstName} {student.lastName}
-          </h2>
-          <p>{student.email}</p>
-          <p>GPA: {student.gpa}</p>
-          <p>
-            {campus ? (
-              <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
-            ) : (
-              'Sorry, no campus to see yet!'
-            )}
-          </p>
-        </section>
-      </main>
-    );
+    if (student) {
+      return (
+        <main className="singlePage">
+          <aside>
+            <UpdateStudent />
+          </aside>
+          <section key={student.id}>
+            <img src={student.imageUrl} />
+            <h2>
+              {student.firstName} {student.lastName}
+            </h2>
+            <p>{student.email}</p>
+            <p>GPA: {student.gpa}</p>
+            <p>
+              {campus ? (
+                <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+              ) : (
+                'Sorry, no campus to see yet!'
+              )}
+            </p>
+          </section>
+        </main>
+      );
+    } else {
+      return <StudentNotFound />;
+    }
   }
 }
 
