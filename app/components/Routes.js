@@ -8,6 +8,7 @@ import CreateCampus from './CreateCampus';
 import CreateStudent from './CreateStudent';
 import NotFound from './NotFound';
 import Home from './Home';
+import AllCampusesBootstrap from './AllCampusesBootstrap';
 
 const Routes = () => {
   return (
@@ -39,6 +40,7 @@ const Routes = () => {
             <Route exact path="/" component={Home} />
 
             <Route exact path="/campuses" component={AllCampuses} />
+            <Route exact path="/acbootstrap" component={AllCampusesBootstrap} />
             <Route exact path="/students" component={AllStudents} />
 
             <Route path="/campuses/create" component={CreateCampus} />

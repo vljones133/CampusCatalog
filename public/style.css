@@ -154,7 +154,7 @@ nav a {
   height: auto;
 } */
 
-.listPage,
+/* .listPage,
 .singlePage {
   display: flex;
   flex-direction: row;
@@ -177,18 +177,18 @@ section {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-}
+} */
 
 .hidden {
   display: none;
 }
 
-#create-form,
+/* #create-form,
 #update-form {
   display: flex;
   flex-direction: column;
   padding: 30px;
-}
+} */
 
 /* Custom default button */
 .btn-secondary,
