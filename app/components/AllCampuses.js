@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCampuses, deleteCampusThunk } from '../redux/campuses';
 
-export class AllCampusesBootstrap extends React.Component {
+export class AllCampuses extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -108,4 +108,4 @@ const mapDispatch = (dispatch) => ({
   deleteCampus: (campus) => dispatch(deleteCampusThunk(campus, history)),
 });
 
-export default connect(mapState, mapDispatch)(AllCampusesBootstrap);
+export default connect(mapState, mapDispatch)(AllCampuses);

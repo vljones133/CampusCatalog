@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStudents, deleteStudentThunk } from '../redux/students';
-import CreateStudent from './CreateStudent';
-import store from '../store';
 
 export class AllStudents extends React.Component {
   constructor(props) {
@@ -51,61 +49,81 @@ export class AllStudents extends React.Component {
     const MapStudents = () => {
       return students.map((student) => {
         return (
-          <div className="student" key={student.id}>
-            <div className="column">
-              <h3>
-                <button
-                  type="button"
-                  className="remove"
-                  onClick={() => this.props.deleteStudent(student.id)}
-                >
-                  X
-                </button>
-                <Link to={`/students/${student.id}`}>
+          <div className="col" key={student.id}>
+            <div className="card shadow-sm">
+              <img
+                className="card-img-top"
+                src={student.imageUrl}
+                alt="image of student"
+              />
+              <div className="card-body">
+                <h4 className="card-title">
                   {student.firstName} {student.lastName}
-                </Link>
-              </h3>
+                </h4>
+
+                <div className="d-flex justify-content-between align-items-center bottom-buttons">
+                  <div className="btn-group">
+                    <Link
+                      type="button"
+                      className="btn btn-sm btn-outline-secondary"
+                      to={`/students/${student.id}`}
+                    >
+                      View
+                    </Link>
+                    <button
+                      type="button"
+                      className="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => this.props.deleteCampus(student.id)}
+                  >
+                    X
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="column">
-              <img src={student.imageUrl} alt="image of student" />
-            </div>
-            <br />
           </div>
         );
       });
     };
 
     return (
-      <main className="listPage">
-        {this.state.loading && <h1>Loading...</h1>}
+      <div className="all-students w-100">
+        <section className="py-5 text-center container">
+          <div className="row py-lg-5">
+            <div className="col-lg-6 col-md-8 mx-auto">
+              <h1 className="fw-light">
+                {this.state.loading && 'Loading...'}All Students
+              </h1>
 
-        <aside>
-          <CreateStudent store={store} />
-        </aside>
-        <section id="students" className="column">
-          {students ? (
-            <div>
-              <p>Sort by:</p>
+              <Link to="/students/create" className="btn btn-primary my-2">
+                Create a new student
+              </Link>
+              <br />
               <select
-                defaultValue="DEFAULT"
+                className="custom-select"
                 onChange={(e) => this.sortStudents(e.target.value)}
               >
-                <option value="DEFAULT" disabled>
-                  None
-                </option>
+                <option selected>Sort by</option>
                 <option value="lastName">Last name</option>
                 <option value="gpa">GPA</option>
               </select>
-              <MapStudents />
             </div>
-          ) : (
-            <h3>No Students</h3>
-          )}
+          </div>
         </section>
-        <button id="toTop" type="button" onClick={goToTop}>
-          ^Top
-        </button>
-      </main>
+        <div className="album py-5 bg-light">
+          <div className="container">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              {students ? <MapStudents /> : <h3>No Students</h3>}
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
