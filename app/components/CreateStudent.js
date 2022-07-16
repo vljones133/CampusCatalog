@@ -53,7 +53,7 @@ class CreateStudent extends Component {
             value={firstName}
             required
           />
-          <div className="invalid-feedback">Please enter a name.</div>
+          <div className="invalid-feedback">Please enter a first name.</div>
         </div>
 
         <div className="form-group">
@@ -66,7 +66,7 @@ class CreateStudent extends Component {
             value={lastName}
             required
           />
-          <div className="invalid-feedback">Please enter a name.</div>
+          <div className="invalid-feedback">Please enter a last name.</div>
         </div>
 
         <div className="form-group">
@@ -79,7 +79,7 @@ class CreateStudent extends Component {
             value={email}
             required
           />
-          <div className="invalid-feedback">Please enter a name.</div>
+          <div className="invalid-feedback">Please enter a valid email address.</div>
         </div>
 
         <div className="form-group">

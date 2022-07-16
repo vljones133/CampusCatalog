@@ -47,22 +47,75 @@ class UpdateStudent extends Component {
     const { handleSubmit, handleChange } = this;
 
     return (
-      <form id="update-form" onSubmit={handleSubmit}>
+      <form
+        id="update-form"
+        className="needs-validation"
+        onSubmit={handleSubmit}
+      >
         <h3>Update student here:</h3>
-        <label htmlFor="firstName">First name:</label>
-        <input name="firstName" onChange={handleChange} value={firstName} />
 
-        <label htmlFor="lastName">Last name:</label>
-        <input name="lastName" onChange={handleChange} value={lastName} />
+        <div className="form-group">
+          <label htmlFor="firstName">First name:</label>
+          <input
+            name="firstName"
+            type="text"
+            className="form-control"
+            onChange={handleChange}
+            value={firstName}
+            required
+          />
+          <div className="invalid-feedback">Please enter a first name.</div>
+        </div>
 
-        <label htmlFor="email">Email:</label>
-        <input name="email" onChange={handleChange} value={email} />
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            name="lastName"
+            type="text"
+            className="form-control"
+            onChange={handleChange}
+            value={lastName}
+            required
+          />
+          <div className="invalid-feedback">Please enter a last name.</div>
+        </div>
 
-        <label htmlFor="gpa">GPA:</label>
-        <input name="gpa" onChange={handleChange} value={gpa} />
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+            name="email"
+            type="email"
+            className="form-control"
+            onChange={handleChange}
+            value={email}
+            required
+          />
+          <div className="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
 
-        <button type="submit">Submit</button>
-        <Link to="/students">Cancel</Link>
+        <div className="form-group">
+          <label htmlFor="gpa">GPA:</label>
+          <input
+            name="gpa"
+            type="text"
+            className="form-control"
+            onChange={handleChange}
+            value={gpa}
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+        <Link
+          to="/students"
+          type="button"
+          className="btn btn-outline-secondary"
+        >
+          Cancel
+        </Link>
       </form>
     );
   }

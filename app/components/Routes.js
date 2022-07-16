@@ -40,7 +40,6 @@ const Routes = () => {
             <Route exact path="/" component={Home} />
 
             <Route exact path="/campuses" component={AllCampuses} />
-            {/* <Route exact path="/acbootstrap" component={AllCampusesBootstrap} /> */}
             <Route exact path="/students" component={AllStudents} />
 
             <Route path="/campuses/create" component={CreateCampus} />
