@@ -50,7 +50,9 @@ class UpdateCampus extends Component {
         className="needs-validation"
         onSubmit={handleSubmit}
       >
-        <h3>Update campus here:</h3>
+        <h3 className="featurette-heading fw-normal lh-1">
+          Update campus here:
+        </h3>
 
         <div className="form-group">
           <label htmlFor="name">Name:</label>

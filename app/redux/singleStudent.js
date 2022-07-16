@@ -23,7 +23,10 @@ export const fetchStudent = (id) => async (dispatch) => {
 export const updateStudentThunk = (student) => {
   return async (dispatch) => {
     try {
-      const response = await axios.put(`/api/students/${student.id}`, student);
+      const response = await axios.put(
+        `/api/students/${student.id}/edit`,
+        student
+      );
       dispatch(updateStudent(response.data));
     } catch (err) {
       console.log(err.response.data);

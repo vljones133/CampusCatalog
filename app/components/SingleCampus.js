@@ -32,36 +32,82 @@ class Campus extends React.Component {
     if (campus) {
       return (
         <main className="singlePage">
-          <aside>
-            <UpdateCampus />
-          </aside>
           <section key={campus.id}>
-            <img src={campus.imageUrl} alt="image of campus" />
-            <h2>{campus.name}</h2>
-            <p>{campus.address}</p>
-            <p>{campus.description}</p>
-            <h3>Student's Enrolled:</h3>
-            <ul>
-              {students && students.length > 0 ? (
-                students.map((student) => {
-                  return (
-                    <li key={student.id}>
+            <div className="row featurette" key={campus.id}>
+              <div className="col-md-7 order-md-2">
+                <h2 className="featurette-heading fw-normal lh-1">
+                  {campus.name}
+                </h2>
+                <address>{campus.address}</address>
+
+                <p className="lead">{campus.description}</p>
+
+                <hr className="featurette-divider" />
+
+                <h5 className="featurette-heading fw-normal lh-1">
+                  Student's Enrolled:
+                </h5>
+                <ul className="list-group list-group-flush">
+                  {students && students.length > 0 ? (
+                    students.map((student) => {
+                      return (
+                        <li key={student.id} className="list-group-item">
+                          <button
+                            type="button"
+                            className="btn btn-outline-danger"
+                            onClick={() => unregisterStudent(student, campus)}
+                          >
+                            Unregister
+                          </button>
+                          <Link
+                            to={`/students/${student.id}`}
+                            class="list-group-item list-group-item-action"
+                          >
+                            {student.firstName} {student.lastName}
+                          </Link>
+                        </li>
+                      );
+                    })
+                  ) : (
+                    <p>Sorry, no students to see yet!</p>
+                  )}
+                </ul>
+              </div>
+              <div className="col-md-5 order-md-1">
+                <img
+                  src={campus.imageUrl}
+                  alt="image of campus"
+                  className="bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                />
+
+                <div className="accordion accordion-flush" id="accordionFlush">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="flush-headingOne">
                       <button
+                        className="accordion-button collapsed"
                         type="button"
-                        onClick={() => unregisterStudent(student, campus)}
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
                       >
-                        Unregister
+                        Edit campus
                       </button>
-                      <Link to={`/students/${student.id}`}>
-                        {student.firstName} {student.lastName}
-                      </Link>
-                    </li>
-                  );
-                })
-              ) : (
-                <p>Sorry, no students to see yet!</p>
-              )}
-            </ul>
+                    </h2>
+                    <div
+                      id="flush-collapseOne"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlush"
+                    >
+                      <div className="accordion-body">
+                        <UpdateCampus />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       );

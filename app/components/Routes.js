@@ -6,6 +6,8 @@ import SingleCampus from './SingleCampus';
 import SingleStudent from './SingleStudent';
 import CreateCampus from './CreateCampus';
 import CreateStudent from './CreateStudent';
+import UpdateCampus from './UpdateCampus';
+import UpdateStudent from './UpdateStudent';
 import NotFound from './NotFound';
 import Home from './Home';
 // import AllCampusesBootstrap from './AllCampusesBootstrap';
@@ -48,42 +50,14 @@ const Routes = () => {
             <Route exact path="/campuses/:id" component={SingleCampus} />
             <Route exact path="/students/:id" component={SingleStudent} />
 
+            {/* <Route exact path="/campuses/:id/edit" component={UpdateCampus} />
+            <Route exact path="/students/:id/edit" component={UpdateStudent} /> */}
+
             <Route component={NotFound} />
           </Switch>
         </main>
       </div>
     </Router>
-    // <Router>
-    //   <div>
-    //     <nav>
-    //       <Link to="/">Welcome!</Link>
-    //       <Link to="/campuses">Campuses</Link>
-    //       <Link to="/students">Students</Link>
-    //     </nav>
-    //     <main>
-    //       <Switch>
-    //         <Route exact path="/">
-    //           <div>
-    //             <h1>Welcome to the Margaret Hamilton Academy of JavaScript!</h1>
-    //             <p>
-    //               This seems like a nice place to get started with some Routes!
-    //             </p>
-    //           </div>
-    //         </Route>
-    //         <Route exact path="/campuses" component={AllCampuses} />
-    //         <Route exact path="/students" component={AllStudents} />
-
-    //         <Route path="/campuses/create" component={CreateCampus} />
-    //         <Route path="/students/create" component={CreateStudent} />
-
-    //         <Route exact path="/campuses/:id" component={SingleCampus} />
-    //         <Route exact path="/students/:id" component={SingleStudent} />
-
-    //         <Route component={NotFound} />
-    //       </Switch>
-    //     </main>
-    //   </div>
-    // </Router>
   );
 };
 
