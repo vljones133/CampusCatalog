@@ -32,7 +32,11 @@ export class AllCampusesBootstrap extends React.Component {
         return (
           <div className="col" key={campus.id}>
             <div className="card shadow-sm">
-              <img src={campus.imageUrl} alt="image of campus" />
+              <img
+                className="card-img-top"
+                src={campus.imageUrl}
+                alt="image of campus"
+              />
               <div className="card-body">
                 <h3>{campus.name}</h3>
                 <p className="card-text">
@@ -71,7 +75,7 @@ export class AllCampusesBootstrap extends React.Component {
     };
 
     return (
-      <main>
+      <div className="w-100">
         <section className="py-5 text-center container">
           <div className="row py-lg-5">
             <div className="col-lg-6 col-md-8 mx-auto">
@@ -89,19 +93,19 @@ export class AllCampusesBootstrap extends React.Component {
         <div className="album py-5 bg-light">
           <div className="container">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <aside>
+              {/* <aside>
                 <CreateCampus store={store} />
-              </aside>
-              <section id="campuses" className="column">
-                {campuses ? <MapCampuses /> : <h3>No Campuses</h3>}
-              </section>
-              <button id="toTop" type="button" onClick={goToTop}>
+              </aside> */}
+
+              {campuses ? <MapCampuses /> : <h3>No Campuses</h3>}
+
+              {/* <button id="toTop" type="button" onClick={goToTop}>
                 ^Top
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 }

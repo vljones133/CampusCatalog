@@ -13,7 +13,7 @@ import AllCampusesBootstrap from './AllCampusesBootstrap';
 const Routes = () => {
   return (
     <Router>
-      <div className="">
+      <div className="w-100">
         <header>
           <div>
             {/* <h3 className="">Welcome!</h3> */}

@@ -34,7 +34,13 @@ main {
   height: 100%;
   width: 100%;
   margin: auto;
-  line-height: 3;
+  /* line-height: 3; */
+}
+
+/* for all pages except home page */
+main {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #main {
@@ -196,6 +202,27 @@ section {
 .btn-secondary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+/* card CSS*/
+.card-body {
+  height: 250px;
+}
+
+.card-text {
+  /* text-overflow: ellipsis; */
+  /* white-space: normal; */
+  /* overflow: hidden;
+  overflow-wrap: break-word; */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-img-top {
+  max-height: 279.55px;
+  object-fit: cover;
 }
 
 @media (min-width: 1200px) {
