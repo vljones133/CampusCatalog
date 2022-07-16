@@ -34,19 +34,57 @@ class CreateCampus extends Component {
     const { handleSubmit, handleChange } = this;
 
     return (
-      <form id="create-form" onSubmit={handleSubmit}>
+      <form
+        id="create-form"
+        className="needs-validation"
+        onSubmit={handleSubmit}
+      >
         <h3>Add a new campus here:</h3>
-        <label htmlFor="name">Name:</label>
-        <input name="name" onChange={handleChange} value={name} />
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            name="name"
+            type="text"
+            className="form-control"
+            onChange={handleChange}
+            value={name}
+            required
+          />
+          <div className="invalid-feedback">Please enter a name.</div>
+        </div>
+        <div className="form-group">
+          <label htmlFor="address">Address:</label>
+          <input
+            name="address"
+            type="text"
+            className="form-control"
+            onChange={handleChange}
+            value={address}
+            required
+          />
+          <div className="invalid-feedback">Please enter an address.</div>
+        </div>
+        <div className="form-group">
+          <label htmlFor="description">Description:</label>
+          <textarea
+            name="description"
+            className="form-control"
+            onChange={handleChange}
+            value={description}
+            rows="3"
+          />
+        </div>
 
-        <label htmlFor="address">Address:</label>
-        <input name="address" onChange={handleChange} value={address} />
-
-        <label htmlFor="description">Description:</label>
-        <input name="description" onChange={handleChange} value={description} />
-
-        <button type="submit">Submit</button>
-        <Link to="/campuses">Cancel</Link>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+        <Link
+          to="/campuses"
+          type="button"
+          className="btn btn-outline-secondary"
+        >
+          Cancel
+        </Link>
       </form>
     );
   }

@@ -25,15 +25,13 @@ header {
 
 main {
   z-index: 1;
-}
-
-main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
   margin: auto;
+  margin-top: 55px;
   /* line-height: 3; */
 }
 
@@ -83,7 +81,7 @@ main {
 header {
   padding-top: 7px;
   position: fixed;
-  height: 53px;
+  height: 55px;
   width: 100%;
   z-index: 100;
   background-color: #333333a1;
@@ -207,6 +205,8 @@ section {
 /* card CSS*/
 .card-body {
   height: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-text {
@@ -223,6 +223,17 @@ section {
 .card-img-top {
   max-height: 279.55px;
   object-fit: cover;
+}
+
+address.card-subtitle {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.bottom-buttons {
+  align-self: flex-end;
+  margin-top: auto;
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
