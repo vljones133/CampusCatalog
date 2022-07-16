@@ -80,7 +80,7 @@ export class AllStudents extends React.Component {
                   <button
                     type="button"
                     className="btn btn-danger"
-                    onClick={() => this.props.deleteCampus(student.id)}
+                    onClick={() => this.props.deleteStudent(student.id)}
                   >
                     X
                   </button>
@@ -109,7 +109,7 @@ export class AllStudents extends React.Component {
                 className="custom-select"
                 onChange={(e) => this.sortStudents(e.target.value)}
               >
-                <option selected>Sort by</option>
+                <option defaultValue="default">Sort by</option>
                 <option value="lastName">Last name</option>
                 <option value="gpa">GPA</option>
               </select>
