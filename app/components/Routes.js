@@ -12,7 +12,7 @@ import Home from './Home';
 const Routes = () => {
   return (
     <Router>
-      <div className="w-100">
+      <div className="w-100 h-100">
         <header>
           <div>
             <nav className="nav nav-masthead justify-content-center float-md-end">
@@ -21,7 +21,7 @@ const Routes = () => {
                 className="float-md-start mb-0 nav-link fw-bold py-1 px-0"
                 aria-current="page"
               >
-                Welcome!
+                Welcome
               </Link>
               <Link to="/campuses" className="nav-link fw-bold py-1 px-0">
                 Campuses
@@ -33,7 +33,7 @@ const Routes = () => {
           </div>
         </header>
 
-        <main>
+        <main className="h-100">
           <Switch>
             <Route exact path="/" component={Home} />
 
@@ -49,38 +49,37 @@ const Routes = () => {
             <Route component={NotFound} />
           </Switch>
         </main>
-        <div className="container">
-          <footer className="d-flex flex-wrap justify-content-between align-items-center">
-            <div className="col-md-4 d-flex align-items-center">
-              <span className="mb-3 mb-md-0 text-muted">
-                &copy; 2022 Valerie Jones
-              </span>
-            </div>
 
-            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li className="ms-3">
-                <a
-                  className="text-muted"
-                  href="https://github.com/vljones133"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa-brands fa-github" />
-                </a>
-              </li>
-              <li className="ms-3">
-                <a
-                  className="text-muted"
-                  href="https://github.com/vljones133"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa-brands fa-linkedin" />
-                </a>
-              </li>
-            </ul>
-          </footer>
-        </div>
+        <footer className="d-flex flex-wrap justify-content-between align-items-center align-self-end">
+          <div className="col-md-4 d-flex align-items-center">
+            <span className="mb-3 mb-md-0 text-muted">
+              &copy; 2022 Valerie Jones
+            </span>
+          </div>
+
+          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li className="ms-3">
+              <a
+                className="text-muted"
+                href="https://github.com/vljones133"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-github" />
+              </a>
+            </li>
+            <li className="ms-3">
+              <a
+                className="text-muted"
+                href="https://www.linkedin.com/in/valeriejones133/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-linkedin" />
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </Router>
   );

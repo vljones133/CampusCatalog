@@ -43,7 +43,7 @@ export const updateCampusStudentsThunk = (student) => {
   return async (dispatch) => {
     try {
       const response = await axios.put(`/api/students/${student.id}`, student);
-      dispatch(updateStudent(response.data));
+      dispatch(updateCampusStudents(response.data));
     } catch (err) {
       console.log(err.response.data);
     }

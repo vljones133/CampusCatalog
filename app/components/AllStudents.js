@@ -2,12 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStudents, deleteStudentThunk } from '../redux/students';
+import MappedStudent from './MappedStudent';
 
 export class AllStudents extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
+      selectedStudents: 'all',
     };
   }
 
@@ -15,6 +17,12 @@ export class AllStudents extends React.Component {
     this.props.getStudents();
     this.setState({ loading: false });
   }
+
+  selectStudents = (evt) => {
+    this.setState({
+      selectedStudents: evt.target.value,
+    });
+  };
 
   sortStudents = (type) => {
     const types = {
@@ -46,46 +54,18 @@ export class AllStudents extends React.Component {
 
     const { students } = this.props;
 
-    const MapStudents = () => {
-      return students.map((student) => {
-        return (
-          <div className="col" key={student.id}>
-            <div className="card shadow-sm">
-              <img
-                className="card-img-top"
-                src={student.imageUrl}
-                alt="image of student"
-              />
-              <div className="card-body">
-                <h4 className="card-title">
-                  <Link to={`/students/${student.id}`}>
-                    {student.firstName} {student.lastName}
-                  </Link>
-                </h4>
-
-                <div className="d-flex justify-content-between align-items-center bottom-buttons">
-                  <div className="btn-group">
-                    <Link
-                      type="button"
-                      className="btn btn-sm btn-outline-secondary"
-                      to={`/students/${student.id}`}
-                    >
-                      View
-                    </Link>
-                  </div>
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => this.props.deleteStudent(student.id)}
-                  >
-                    X
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
+    const filteredStudents = () => {
+      const selected = this.state.selectedStudents;
+      return this.props.students.filter((student) => {
+        if (selected === 'all') return student;
+        if (selected === 'unregistered') return student.campusId === null;
       });
+    };
+
+    const MapStudents = () => {
+      return filteredStudents().map((student) => (
+        <MappedStudent key={student.id} student={student} />
+      ));
     };
 
     return (
@@ -105,9 +85,21 @@ export class AllStudents extends React.Component {
                 className="custom-select"
                 onChange={(e) => this.sortStudents(e.target.value)}
               >
-                <option defaultValue="default">Sort by</option>
+                <option selected>Sort by</option>
                 <option value="lastName">Last name</option>
                 <option value="gpa">GPA</option>
+              </select>
+
+              <select
+                className="custom-select"
+                value={this.state.selectedStudents}
+                onChange={this.selectStudents}
+              >
+                <option selected value="all">
+                  Filter by
+                </option>
+                <option value="all">All Students</option>
+                <option value="unregistered">Unregistered</option>
               </select>
             </div>
           </div>

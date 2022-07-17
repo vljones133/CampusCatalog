@@ -14,13 +14,16 @@ site color theme:
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
-  padding: 0;
-  margin: 0;
   width: 100vw;
   letter-spacing: 0.7px;
-
   font-family: Open Sans, Arial, sans-serif;
   font-size: 14px;
   color: #666;
@@ -46,6 +49,18 @@ h6 {
 }
 
 main {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.home-main {
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -156,6 +171,7 @@ a.nav-link:focus {
 .landing-text {
   width: 80%;
   max-width: 1000px;
+  margin: auto;
 }
 
 .landing-text h1 {
@@ -190,6 +206,7 @@ a.btn.btn-primary {
   transition-duration: 0.2s;
   -webkit-transition-property: all !important;
   transition-property: all !important;
+  margin-bottom: 23px !important;
 }
 
 button.btn.btn-primary {
@@ -344,7 +361,7 @@ h4.card-title a:hover {
 }
 
 .all-students .card-body {
-  height: 140px;
+  height: 152px;
 }
 
 .all-campuses .card-body {
@@ -367,7 +384,8 @@ address.card-subtitle {
   margin-bottom: 7px;
 }
 
-address {
+address,
+.gold-text {
   color: #daa71b;
 }
 
@@ -446,7 +464,7 @@ form#create-form {
 
 #toTopBtn {
   position: fixed;
-  bottom: 26px;
+  bottom: 47px;
   right: 39px;
   z-index: 98;
   padding: 21px;
@@ -475,7 +493,7 @@ footer {
   background-color: #232c43d1;
   bottom: 0;
   width: 100%;
-  height: 47px;
+  height: 40px;
   left: 0;
   margin-bottom: 0 !important;
   padding: 5px 20px !important;
@@ -489,4 +507,9 @@ footer .text-muted {
   line-height: 1.3em;
   letter-spacing: 1.3px;
   font-size: 14px;
+}
+
+footer .text-muted i {
+  font-size: 20px;
+  padding: 0 5px;
 }
