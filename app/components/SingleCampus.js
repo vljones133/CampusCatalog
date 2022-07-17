@@ -23,7 +23,7 @@ class Campus extends React.Component {
     const students = campus.students;
 
     const unregisterStudent = (student) => {
-      this.props.updateStudent({
+      this.props.updateCampusStudents({
         ...student,
         campusId: null,
       });
@@ -60,7 +60,7 @@ class Campus extends React.Component {
                         </button>
                         <Link
                           to={`/students/${student.id}`}
-                          class="list-group-item list-group-item-action"
+                          className="list-group-item list-group-item-action"
                         >
                           {student.firstName} {student.lastName}
                         </Link>
