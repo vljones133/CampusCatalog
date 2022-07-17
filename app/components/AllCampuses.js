@@ -23,6 +23,12 @@ export class AllCampuses extends React.Component {
       });
     };
 
+    const loading = (
+      <div className="spinner-border text-secondary" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
+
     const { campuses } = this.props;
 
     const MapCampuses = () => {
@@ -49,12 +55,6 @@ export class AllCampuses extends React.Component {
                     >
                       View
                     </Link>
-                    <button
-                      type="button"
-                      className="btn btn-sm btn-outline-secondary"
-                    >
-                      Edit
-                    </button>
                   </div>
                   <button
                     type="button"
@@ -77,7 +77,7 @@ export class AllCampuses extends React.Component {
           <div className="row py-lg-5">
             <div className="col-lg-6 col-md-8 mx-auto">
               <h1 className="fw-light">
-                {this.state.loading && 'Loading...'}All Campuses
+                {this.state.loading && loading}All Campuses
               </h1>
               <p>
                 <Link to="/campuses/create" className="btn btn-primary my-2">

@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Southwestern Oklahoma State University",
+    "imageUrl": "https://images.unsplash.com/photo-1568792923760-d70635a89fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "9 Heffernan Alley",
+    "description": "Minions ipsum underweaaar uuuhhh bananaaaa pepete uuuhhh hahaha bee do bee do bee do. Aaaaaah poulet tikka masala hana dul sae aaaaaah potatoooo bananaaaa poulet tikka masala me want bananaaa!"
+  },
+  {
+    "name": "Harbin Medical University",
+    "imageUrl": "https://images.unsplash.com/photo-1531259736756-6caccf485f81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "67230 Dorton Plaza",
+    "description": "Tank yuuu! la bodaaa poopayee pepete pepete jeje poulet tikka masala wiiiii underweaaar bappleees. Hana dul sae gelatooo potatoooo daa potatoooo belloo! Aaaaaah jeje jeje hahaha. Pepete tulaliloo pepete ti aamoo!"
+  },
+  {
+    "name": "Universidad Tecnológica de Panamá",
+    "imageUrl": "https://images.unsplash.com/photo-1583373834259-46cc92173cb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+    "address": "9598 Lakewood Pass",
+    "description": "Tank yuuu! Bananaaaa po kass jiji potatoooo tulaliloo la bodaaa. Bappleees chasy potatoooo ti aamoo! Para tú chasy uuuhhh."
+  },
+  {
+    "name": "Free University of Bozen",
+    "imageUrl": "https://images.unsplash.com/photo-1605470207062-b72b5cbe2a87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "12616 Garrison Avenue",
+    "description": "Baboiii tulaliloo wiiiii uuuhhh la bodaaa. Belloo! aaaaaah hahaha tulaliloo potatoooo jeje underweaaar jeje hana dul sae."
+  },
+  {
+    "name": "Ecole Nationale Vétérinaire de Nantes",
+    "imageUrl": "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "190 Lakewood Trail",
+    "description": "Minions ipsum po kass wiiiii tank yuuu! Uuuhhh hahaha tatata bala tu belloo! Tank yuuu! Chasy pepete pepete pepete ti aamoo! Tank yuuu! ti aamoo! Poopayee me want bananaaa!"
+  },
+  {
+    "name": "Hyogo University",
+    "imageUrl": "https://images.unsplash.com/photo-1574958269340-fa927503f3dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1648&q=80",
+    "address": "189 Linden Place",
+    "description": "Minions ipsum chasy gelatooo bananaaaa esse dolor exercitation commodo. Hahaha voluptate cillum daa consectetur irure poopayee reprehenderit tulaliloo. Wiiiii nisi poulet tikka masala quis exercitation tempor para tú officia qui. Aute labore para tú incididunt."
+  },
+  {
+    "name": "Villa Julie College",
+    "imageUrl": "https://images.unsplash.com/photo-1619512673224-91cfb2688284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "7884 Golden Leaf Road",
+    "description": "La bodaaa quis esse poopayee magna ad quis me want bananaaa! Ut voluptate aaaaaah butt pepete. Labore hana dul sae jeje occaecat exercitation poulet tikka masala elit occaecat uuuhhh esse."
+  },
+  {
+    "name": "State University of New York College at Geneseo",
+    "imageUrl": "https://images.unsplash.com/photo-1580537782437-8d6a0ca13de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "037 Graceland Lane",
+    "description": "Ex bananaaaa jeje magna irure consequat elit sed incididunt me want bananaaa! Poopayee belloo! Chasy enim quis irure ex po kass. Cillum aliqua daa adipisicing para tú irure consectetur duis tatata bala tu reprehenderit."
+  },
+  {
+    "name": "Université Shalom de Bunia",
+    "imageUrl": "https://images.unsplash.com/photo-1504817343863-5092a923803e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "08096 Chinook Alley",
+    "description": "Aute potatoooo quis ad incididunt ut aliquip occaecat. Ut me want bananaaa! Pepete aliqua ullamco uuuhhh enim quis eiusmod para tú."
+  },
+  {
+    "name": "Engineering Colleges in Tamil Nadu",
+    "imageUrl": "https://images.unsplash.com/photo-1547653872-052e3539decc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "address": "0 Hanson Place",
+    "description": "Aliquip nostrud adipisicing gelatooo commodo aliquip dolore dolore jeje esse. Wiiiii sed underweaaar gelatooo duis quis. Eiusmod qui enim minim aliqua ullamco."
+  },
+  {
+    "name": "Universitat de Lleida",
+    "imageUrl": "",
+    "address": "166 Brickson Park Junction",
+    "description": "produchttps://images.unsplash.com/photo-1571443979997-d25042c872e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80tize mission-critical e-services"
+  },
+  {
+    "name": "Institut Teknologi Bandung",
+    "imageUrl": "https://images.unsplash.com/photo-1472121779802-43c68a9f405f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2833&q=80",
+    "address": "70902 Lyons Road",
+    "description": "seize revolutionary infrastructures"
+  },
+  {
+    "name": "University of the South",
+    "imageUrl": "https://images.unsplash.com/photo-1508302882073-8af6be4c6688?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+    "address": "622 Texas Lane",
+    "description": "leverage cross-media users"
+  },
+  {
+    "name": "St. John's University",
+    "imageUrl": "https://images.unsplash.com/photo-1597087264721-2a27e45f15ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+    "address": "29 Monica Parkway",
+    "description": "productize efficient relationships"
+  },
+  {
+    "name": "Institute of Germanic Studies, University of London",
+    "imageUrl": "https://images.unsplash.com/photo-1569447891824-7a1758aa73a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+    "address": "0 Sherman Hill",
+    "description": "extend mission-critical e-markets"
+  },
+  {
+    "name": "Wawasan Open University",
+    "imageUrl": "http://dummyimage.com/346x121.png/ff4444/ffffff",
+    "address": "720 Garrison Circle",
+    "description": "benchmark 24/7 e-commerce"
+  },
+  {
+    "name": "Tama Art University",
+    "imageUrl": "http://dummyimage.com/304x217.png/ff4444/ffffff",
+    "address": "094 Southridge Junction",
+    "description": "aggregate virtual metrics"
+  },
+  {
+    "name": "Shanghai Customs College",
+    "imageUrl": "http://dummyimage.com/213x390.png/dddddd/000000",
+    "address": "04 Longview Point",
+    "description": "mesh bleeding-edge solutions"
+  },
+  {
+    "name": "Kasetsart University",
+    "imageUrl": "http://dummyimage.com/244x274.png/5fa2dd/ffffff",
+    "address": "9 Harper Road",
+    "description": "synthesize bleeding-edge mindshare"
+  },
+  {
+    "name": "Moscow State University of Economics, Statistics and Informatics",
+    "imageUrl": "http://dummyimage.com/109x392.png/cc0000/ffffff",
+    "address": "98 Westend Park",
+    "description": "syndicate value-added paradigms"
+  },
+  {
+    "name": "Sarah Lawrence College",
+    "imageUrl": "http://dummyimage.com/318x165.png/dddddd/000000",
+    "address": "4214 Roth Court",
+    "description": "implement value-added niches"
+  },
+  {
+    "name": "Guangdong Polytechnic Normal University",
+    "imageUrl": "http://dummyimage.com/186x244.png/cc0000/ffffff",
+    "address": "1 Cambridge Road",
+    "description": "reinvent 24/7 systems"
+  },
+  {
+    "name": "Université Louis Pasteur (Strasbourg I)",
+    "imageUrl": "http://dummyimage.com/269x219.png/cc0000/ffffff",
+    "address": "374 Esker Circle",
+    "description": "repurpose cross-platform users"
+  },
+  {
+    "name": "Victoria University of Wellington",
+    "imageUrl": "http://dummyimage.com/280x385.png/cc0000/ffffff",
+    "address": "87 Old Shore Point",
+    "description": "incubate clicks-and-mortar niches"
+  },
+  {
+    "name": "International University",
+    "imageUrl": "http://dummyimage.com/278x301.png/dddddd/000000",
+    "address": "24 New Castle Parkway",
+    "description": "engage dot-com mindshare"
+  },
+  {
+    "name": "Universidad Autónoma de Colombia",
+    "imageUrl": "http://dummyimage.com/331x301.png/cc0000/ffffff",
+    "address": "4140 Stang Way",
+    "description": "seize open-source deliverables"
+  },
+  {
+    "name": "Zabol University",
+    "imageUrl": "http://dummyimage.com/373x103.png/cc0000/ffffff",
+    "address": "5060 Westport Parkway",
+    "description": "leverage leading-edge e-services"
+  },
+  {
+    "name": "Universidad Tecnológica de los Andes de Apurímac",
+    "imageUrl": "http://dummyimage.com/305x374.png/dddddd/000000",
+    "address": "1 Lunder Hill",
+    "description": "engage distributed convergence"
+  },
+  {
+    "name": "Universitas Kristen Krida Wacana",
+    "imageUrl": "http://dummyimage.com/224x392.png/ff4444/ffffff",
+    "address": "82 Almo Court",
+    "description": "transform strategic methodologies"
+  },
+  {
+    "name": "Alpha Omega University",
+    "imageUrl": "http://dummyimage.com/248x209.png/ff4444/ffffff",
+    "address": "65 Oriole Crossing",
+    "description": "visualize back-end web services"
+  },
+  {
+    "name": "Batchelor Institute of Indigenous Tertiary Education",
+    "imageUrl": "http://dummyimage.com/121x198.png/cc0000/ffffff",
+    "address": "207 Monument Crossing",
+    "description": "strategize robust functionalities"
+  },
+  {
+    "name": "Sebatian Kolowa University College",
+    "imageUrl": "http://dummyimage.com/385x149.png/5fa2dd/ffffff",
+    "address": "1 Southridge Avenue",
+    "description": "strategize front-end portals"
+  },
+  {
+    "name": "Maryville College",
+    "imageUrl": "http://dummyimage.com/111x296.png/dddddd/000000",
+    "address": "6 Pawling Crossing",
+    "description": "productize frictionless mindshare"
+  },
+  {
+    "name": "Tomsk State University",
+    "imageUrl": "http://dummyimage.com/228x162.png/5fa2dd/ffffff",
+    "address": "3320 Meadow Ridge Lane",
+    "description": "matrix cross-platform technologies"
+  },
+  {
+    "name": "College Misericordia",
+    "imageUrl": "http://dummyimage.com/137x298.png/cc0000/ffffff",
+    "address": "589 Bashford Hill",
+    "description": "streamline next-generation systems"
+  },
+  {
+    "name": "Southern Polytechnic State Univerisity",
+    "imageUrl": "http://dummyimage.com/144x111.png/cc0000/ffffff",
+    "address": "86 Blaine Avenue",
+    "description": "recontextualize world-class mindshare"
+  },
+  {
+    "name": "Salem University",
+    "imageUrl": "http://dummyimage.com/299x339.png/ff4444/ffffff",
+    "address": "0536 Holy Cross Street",
+    "description": "deploy synergistic niches"
+  },
+  {
+    "name": "Majmaah University",
+    "imageUrl": "http://dummyimage.com/134x128.png/dddddd/000000",
+    "address": "09255 Parkside Center",
+    "description": "enhance B2B applications"
+  },
+  {
+    "name": "Baker College of Cadillac",
+    "imageUrl": "http://dummyimage.com/128x123.png/dddddd/000000",
+    "address": "6 Magdeline Drive",
+    "description": "implement dot-com partnerships"
+  },
+  {
+    "name": "The Interdisciplinary Center Herzliya",
+    "imageUrl": "http://dummyimage.com/249x310.png/5fa2dd/ffffff",
+    "address": "58523 Independence Alley",
+    "description": "reintermediate value-added systems"
+  },
+  {
+    "name": "Technological Education Institute of Larissa",
+    "imageUrl": "http://dummyimage.com/301x214.png/5fa2dd/ffffff",
+    "address": "35825 Jackson Street",
+    "description": "brand dynamic networks"
+  },
+  {
+    "name": "University of Aizu",
+    "imageUrl": "http://dummyimage.com/221x287.png/cc0000/ffffff",
+    "address": "90961 Oneill Circle",
+    "description": "benchmark one-to-one synergies"
+  },
+  {
+    "name": "Matej Bel University in Banská Bystrica",
+    "imageUrl": "http://dummyimage.com/317x223.png/5fa2dd/ffffff",
+    "address": "0947 Raven Lane",
+    "description": "utilize value-added users"
+  },
+  {
+    "name": "University of the Faroe Islands",
+    "imageUrl": "http://dummyimage.com/178x148.png/dddddd/000000",
+    "address": "94 Comanche Way",
+    "description": "redefine best-of-breed supply-chains"
+  },
+  {
+    "name": "Posts & Telecommunications Institute of Technology",
+    "imageUrl": "http://dummyimage.com/247x172.png/cc0000/ffffff",
+    "address": "3 Fordem Road",
+    "description": "engage collaborative platforms"
+  },
+  {
+    "name": "Kamchatka State University Vitus Bering",
+    "imageUrl": "http://dummyimage.com/290x324.png/dddddd/000000",
+    "address": "8574 Dahle Center",
+    "description": "orchestrate plug-and-play e-tailers"
+  },
+  {
+    "name": "Wadi International University",
+    "imageUrl": "http://dummyimage.com/349x227.png/cc0000/ffffff",
+    "address": "84498 Barby Pass",
+    "description": "revolutionize transparent technologies"
+  },
+  {
+    "name": "Pfeiffer University",
+    "imageUrl": "http://dummyimage.com/285x348.png/5fa2dd/ffffff",
+    "address": "839 Bashford Plaza",
+    "description": "utilize cross-platform systems"
+  },
+  {
+    "name": "Ho Chi Minh City University of Medicine and Pharmacy",
+    "imageUrl": "http://dummyimage.com/365x137.png/ff4444/ffffff",
+    "address": "4124 Farwell Court",
+    "description": "innovate bleeding-edge supply-chains"
+  },
+  {
+    "name": "Syktyvkar State University",
+    "imageUrl": "http://dummyimage.com/166x280.png/5fa2dd/ffffff",
+    "address": "83383 Farragut Pass",
+    "description": "recontextualize cross-media eyeballs"
+  },
+  {
+    "name": "University of Wroclaw",
+    "imageUrl": "http://dummyimage.com/244x249.png/ff4444/ffffff",
+    "address": "92 Northwestern Point",
+    "description": "reintermediate bricks-and-clicks applications"
+  },
+  {
+    "name": "FAE Business School - Faculdade de Administração e Economia",
+    "imageUrl": "http://dummyimage.com/296x327.png/dddddd/000000",
+    "address": "45948 Morning Center",
+    "description": "innovate turn-key metrics"
+  },
+  {
+    "name": "Southwest University of Nationalities",
+    "imageUrl": "http://dummyimage.com/393x215.png/dddddd/000000",
+    "address": "614 Sullivan Crossing",
+    "description": "leverage next-generation methodologies"
+  },
+  {
+    "name": "Ecole Supérieure de Commerce de Nantes-Atlantique",
+    "imageUrl": "http://dummyimage.com/320x258.png/dddddd/000000",
+    "address": "69276 Bluestem Park",
+    "description": "iterate front-end partnerships"
+  },
+  {
+    "name": "Dillard University",
+    "imageUrl": "http://dummyimage.com/331x214.png/dddddd/000000",
+    "address": "3452 Cascade Hill",
+    "description": "transition rich bandwidth"
+  },
+  {
+    "name": "Jones International University",
+    "imageUrl": "http://dummyimage.com/238x268.png/dddddd/000000",
+    "address": "04690 Declaration Plaza",
+    "description": "streamline back-end portals"
+  },
+  {
+    "name": "2nd Military Medical University",
+    "imageUrl": "http://dummyimage.com/263x169.png/dddddd/000000",
+    "address": "03913 Sundown Parkway",
+    "description": "reinvent robust communities"
+  },
+  {
+    "name": "Qinghai Radio & Television University",
+    "imageUrl": "http://dummyimage.com/240x357.png/ff4444/ffffff",
+    "address": "738 Texas Crossing",
+    "description": "harness end-to-end content"
+  },
+  {
+    "name": "Edison Community College",
+    "imageUrl": "http://dummyimage.com/127x157.png/dddddd/000000",
+    "address": "8975 Havey Circle",
+    "description": "revolutionize killer platforms"
+  },
+  {
+    "name": "Ternopil Academy of National Economy",
+    "imageUrl": "http://dummyimage.com/262x354.png/5fa2dd/ffffff",
+    "address": "9555 Mayfield Place",
+    "description": "revolutionize world-class eyeballs"
+  },
+  {
+    "name": "Varna Free University",
+    "imageUrl": "http://dummyimage.com/143x210.png/5fa2dd/ffffff",
+    "address": "70 Division Alley",
+    "description": "envisioneer cross-media architectures"
+  },
+  {
+    "name": "Universidad Tecnológica Metropolitana",
+    "imageUrl": "http://dummyimage.com/328x360.png/ff4444/ffffff",
+    "address": "10 Shopko Plaza",
+    "description": "benchmark compelling metrics"
+  },
+  {
+    "name": "Beijing Institute of Technology",
+    "imageUrl": "http://dummyimage.com/217x399.png/cc0000/ffffff",
+    "address": "84 Northport Pass",
+    "description": "repurpose B2B architectures"
+  },
+  {
+    "name": "Angkor University",
+    "imageUrl": "http://dummyimage.com/344x159.png/cc0000/ffffff",
+    "address": "32 Tony Court",
+    "description": "e-enable wireless initiatives"
+  },
+  {
+    "name": "Bethel College St. Paul",
+    "imageUrl": "http://dummyimage.com/323x203.png/ff4444/ffffff",
+    "address": "3 Sage Drive",
+    "description": "cultivate cross-platform ROI"
+  },
+  {
+    "name": "Gomel State Medical University",
+    "imageUrl": "http://dummyimage.com/121x351.png/dddddd/000000",
+    "address": "2753 Del Sol Street",
+    "description": "streamline best-of-breed niches"
+  },
+  {
+    "name": "Sultanah Bahiyah Polytechnic",
+    "imageUrl": "http://dummyimage.com/363x102.png/cc0000/ffffff",
+    "address": "24 Dapin Place",
+    "description": "reintermediate B2B ROI"
+  },
+  {
+    "name": "Yokohama National University",
+    "imageUrl": "http://dummyimage.com/338x343.png/dddddd/000000",
+    "address": "7 Cherokee Way",
+    "description": "harness front-end e-services"
+  },
+  {
+    "name": "Russian-Armenian (Slavonic) State University",
+    "imageUrl": "http://dummyimage.com/108x342.png/dddddd/000000",
+    "address": "2160 Northridge Hill",
+    "description": "harness bricks-and-clicks e-services"
+  },
+  {
+    "name": "Universitas Advent Indonesia",
+    "imageUrl": "http://dummyimage.com/217x273.png/cc0000/ffffff",
+    "address": "37 Warbler Drive",
+    "description": "harness vertical platforms"
+  },
+  {
+    "name": "Academy of Music \"Georghe Dima\" Cluj-Napoca",
+    "imageUrl": "http://dummyimage.com/153x136.png/cc0000/ffffff",
+    "address": "13364 Mallory Crossing",
+    "description": "mesh proactive metrics"
+  },
+  {
+    "name": "Chinese People's Public Security University",
+    "imageUrl": "http://dummyimage.com/360x222.png/ff4444/ffffff",
+    "address": "97406 Pine View Drive",
+    "description": "utilize dot-com e-tailers"
+  },
+  {
+    "name": "Universität Paderborn",
+    "imageUrl": "http://dummyimage.com/368x150.png/5fa2dd/ffffff",
+    "address": "2409 International Avenue",
+    "description": "harness efficient communities"
+  },
+  {
+    "name": "Omsk State Medicical Academy",
+    "imageUrl": "http://dummyimage.com/183x217.png/ff4444/ffffff",
+    "address": "38076 Hollow Ridge Drive",
+    "description": "seize web-enabled channels"
+  },
+  {
+    "name": "Culver-Stockton College",
+    "imageUrl": "http://dummyimage.com/380x220.png/5fa2dd/ffffff",
+    "address": "593 Green Ridge Lane",
+    "description": "orchestrate plug-and-play e-markets"
+  },
+  {
+    "name": "Universidad Modular Abierta",
+    "imageUrl": "http://dummyimage.com/299x125.png/cc0000/ffffff",
+    "address": "6494 Goodland Park",
+    "description": "seize end-to-end e-commerce"
+  },
+  {
+    "name": "Al-Ahliyya Amman University",
+    "imageUrl": "http://dummyimage.com/267x140.png/5fa2dd/ffffff",
+    "address": "4954 Division Alley",
+    "description": "leverage B2B paradigms"
+  },
+  {
+    "name": "Centre de Formation et de Perfectionnement des Journalistes",
+    "imageUrl": "http://dummyimage.com/117x206.png/ff4444/ffffff",
+    "address": "54687 Oxford Trail",
+    "description": "morph mission-critical web services"
+  },
+  {
+    "name": "Adigrat University",
+    "imageUrl": "http://dummyimage.com/220x185.png/5fa2dd/ffffff",
+    "address": "97 Bayside Street",
+    "description": "harness impactful deliverables"
+  },
+  {
+    "name": "Universidad Surcolombiana",
+    "imageUrl": "http://dummyimage.com/219x378.png/dddddd/000000",
+    "address": "3808 Forest Dale Trail",
+    "description": "brand B2C architectures"
+  },
+  {
+    "name": "University of Wisconsin - Oshkosh",
+    "imageUrl": "http://dummyimage.com/352x320.png/5fa2dd/ffffff",
+    "address": "75489 Twin Pines Alley",
+    "description": "enhance distributed methodologies"
+  },
+  {
+    "name": "Islamic Azad University, Saveh",
+    "imageUrl": "http://dummyimage.com/100x294.png/ff4444/ffffff",
+    "address": "30793 Crest Line Alley",
+    "description": "e-enable web-enabled users"
+  },
+  {
+    "name": "University of the East, Coloocan",
+    "imageUrl": "http://dummyimage.com/325x113.png/dddddd/000000",
+    "address": "4534 Dryden Terrace",
+    "description": "embrace synergistic applications"
+  },
+  {
+    "name": "Piedmont College",
+    "imageUrl": "http://dummyimage.com/149x306.png/ff4444/ffffff",
+    "address": "43 Park Meadow Way",
+    "description": "matrix turn-key web services"
+  },
+  {
+    "name": "Corporación Universitaria de la Costa (UNICOSTA)",
+    "imageUrl": "http://dummyimage.com/388x371.png/dddddd/000000",
+    "address": "71864 Gina Avenue",
+    "description": "envisioneer back-end relationships"
+  },
+  {
+    "name": "Chengdu University of Traditional Chinese Medicine",
+    "imageUrl": "http://dummyimage.com/336x114.png/ff4444/ffffff",
+    "address": "93260 Rieder Lane",
+    "description": "monetize killer schemas"
+  },
+  {
+    "name": "Hafencity Universität Hamburg",
+    "imageUrl": "http://dummyimage.com/168x241.png/dddddd/000000",
+    "address": "39 Tony Avenue",
+    "description": "implement proactive mindshare"
+  },
+  {
+    "name": "St. Clair College",
+    "imageUrl": "http://dummyimage.com/109x265.png/ff4444/ffffff",
+    "address": "3770 Heffernan Crossing",
+    "description": "maximize holistic markets"
+  },
+  {
+    "name": "Universidad Nacional de Asunción",
+    "imageUrl": "http://dummyimage.com/113x107.png/ff4444/ffffff",
+    "address": "6929 Brentwood Place",
+    "description": "generate cross-media partnerships"
+  },
+  {
+    "name": "Universidad de Flores - Buenos Aires",
+    "imageUrl": "http://dummyimage.com/256x152.png/dddddd/000000",
+    "address": "98743 Ridge Oak Parkway",
+    "description": "engineer B2C e-business"
+  },
+  {
+    "name": "Minnesota Bible College",
+    "imageUrl": "http://dummyimage.com/227x396.png/ff4444/ffffff",
+    "address": "3145 Farwell Park",
+    "description": "utilize mission-critical e-business"
+  },
+  {
+    "name": "University of Massachusetts Medical Center at Worcester",
+    "imageUrl": "http://dummyimage.com/380x146.png/cc0000/ffffff",
+    "address": "4 Calypso Circle",
+    "description": "productize extensible solutions"
+  },
+  {
+    "name": "Amman University",
+    "imageUrl": "http://dummyimage.com/256x300.png/5fa2dd/ffffff",
+    "address": "77815 Burrows Parkway",
+    "description": "seize open-source models"
+  },
+  {
+    "name": "Najran University",
+    "imageUrl": "http://dummyimage.com/197x173.png/cc0000/ffffff",
+    "address": "707 Ludington Center",
+    "description": "deploy interactive schemas"
+  },
+  {
+    "name": "Argosy University",
+    "imageUrl": "http://dummyimage.com/328x276.png/ff4444/ffffff",
+    "address": "764 Lighthouse Bay Center",
+    "description": "utilize B2B ROI"
+  },
+  {
+    "name": "Universidad Privada Boliviana",
+    "imageUrl": "http://dummyimage.com/263x291.png/5fa2dd/ffffff",
+    "address": "596 Talisman Way",
+    "description": "monetize enterprise e-commerce"
+  },
+  {
+    "name": "Instituto Tecnológico de Buenos Aires",
+    "imageUrl": "http://dummyimage.com/381x352.png/5fa2dd/ffffff",
+    "address": "964 Drewry Road",
+    "description": "streamline open-source content"
+  },
+  {
+    "name": "Music Academy in Cracow",
+    "imageUrl": "http://dummyimage.com/167x388.png/ff4444/ffffff",
+    "address": "0 Harper Street",
+    "description": "recontextualize cross-platform partnerships"
+  },
+  {
+    "name": "Universidad Adventista Dominicana",
+    "imageUrl": "http://dummyimage.com/159x249.png/ff4444/ffffff",
+    "address": "315 5th Court",
+    "description": "e-enable 24/365 applications"
+  },
+  {
+    "name": "Universidad Autónoma Metropolitana - Iztapalapa",
+    "imageUrl": "http://dummyimage.com/331x324.png/cc0000/ffffff",
+    "address": "45 Kings Junction",
+    "description": "reintermediate compelling supply-chains"
+  }
+]

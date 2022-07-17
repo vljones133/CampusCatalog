@@ -6,11 +6,8 @@ import SingleCampus from './SingleCampus';
 import SingleStudent from './SingleStudent';
 import CreateCampus from './CreateCampus';
 import CreateStudent from './CreateStudent';
-import UpdateCampus from './UpdateCampus';
-import UpdateStudent from './UpdateStudent';
 import NotFound from './NotFound';
 import Home from './Home';
-// import AllCampusesBootstrap from './AllCampusesBootstrap';
 
 const Routes = () => {
   return (
@@ -18,11 +15,10 @@ const Routes = () => {
       <div className="w-100">
         <header>
           <div>
-            {/* <h3 className="">Welcome!</h3> */}
             <nav className="nav nav-masthead justify-content-center float-md-end">
               <Link
                 to="/"
-                className="float-md-start mb-0 nav-link fw-bold py-1 px-0 active"
+                className="float-md-start mb-0 nav-link fw-bold py-1 px-0"
                 aria-current="page"
               >
                 Welcome!
@@ -49,9 +45,6 @@ const Routes = () => {
 
             <Route exact path="/campuses/:id" component={SingleCampus} />
             <Route exact path="/students/:id" component={SingleStudent} />
-
-            {/* <Route exact path="/campuses/:id/edit" component={UpdateCampus} />
-            <Route exact path="/students/:id/edit" component={UpdateStudent} /> */}
 
             <Route component={NotFound} />
           </Switch>
