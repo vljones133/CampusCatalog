@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const SET_STUDENT = 'SET_STUDENT';
 export const UPDATE_STUDENT = 'UPDATE_STUDENT';
+export const UPDATE_CAMPUS_STUDENTS = 'UPDATE_CAMPUS_STUDENTS';
 
 const setStudent = (student) => ({
   type: SET_STUDENT,
@@ -15,6 +16,13 @@ const updateStudent = (student) => {
   };
 };
 
+const updateCampusStudents = (student) => {
+  return {
+    type: UPDATE_CAMPUS_STUDENTS,
+    student,
+  };
+};
+
 export const fetchStudent = (id) => async (dispatch) => {
   const studentResponse = await axios.get(`/api/students/${id}`);
   dispatch(setStudent(studentResponse.data));
@@ -23,10 +31,18 @@ export const fetchStudent = (id) => async (dispatch) => {
 export const updateStudentThunk = (student) => {
   return async (dispatch) => {
     try {
-      const response = await axios.put(
-        `/api/students/${student.id}/edit`,
-        student
-      );
+      const response = await axios.put(`/api/students/${student.id}`, student);
+      dispatch(updateStudent(response.data));
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+};
+
+export const updateCampusStudentsThunk = (student) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.put(`/api/students/${student.id}`, student);
       dispatch(updateStudent(response.data));
     } catch (err) {
       console.log(err.response.data);

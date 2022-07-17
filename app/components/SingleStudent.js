@@ -30,7 +30,16 @@ class Student extends React.Component {
                 {student.firstName} {student.lastName}
               </h2>
 
-              <p>{student.email}</p>
+              <p>
+                <a
+                  href={'mailto:' + student.email}
+                  className="email"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {student.email}
+                </a>
+              </p>
               <p>GPA: {student.gpa}</p>
 
               <p>

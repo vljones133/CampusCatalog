@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { UPDATE_STUDENT } from './singleStudent';
+import { UPDATE_CAMPUS_STUDENTS } from './singleStudent';
 
 export const SET_CAMPUS = 'SET_CAMPUS';
 const UPDATE_CAMPUS = 'UPDATE_CAMPUS';
@@ -38,13 +38,14 @@ const campusReducer = (campus = {}, action) => {
       return action.campus;
     case UPDATE_CAMPUS:
       return { ...campus, ...action.campus };
-    case UPDATE_STUDENT:
+    case UPDATE_CAMPUS_STUDENTS:
       return {
         ...campus,
         students: campus.students.filter(
           (student) => student.id !== action.student.id
         ),
       };
+
     default:
       return campus;
   }

@@ -39,7 +39,7 @@ class CreateCampus extends Component {
         className="needs-validation"
         onSubmit={handleSubmit}
       >
-        <h3>Add a new campus here:</h3>
+        <h2>Add a new campus here:</h2>
 
         <div className="form-group">
           <label htmlFor="name">Name:</label>
