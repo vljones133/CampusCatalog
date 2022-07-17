@@ -58,7 +58,9 @@ export class AllStudents extends React.Component {
               />
               <div className="card-body">
                 <h4 className="card-title">
-                  {student.firstName} {student.lastName}
+                  <Link to={`/students/${student.id}`}>
+                    {student.firstName} {student.lastName}
+                  </Link>
                 </h4>
 
                 <div className="d-flex justify-content-between align-items-center bottom-buttons">

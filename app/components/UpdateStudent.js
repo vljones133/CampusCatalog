@@ -123,12 +123,12 @@ class UpdateStudent extends Component {
   }
 }
 
-const mapStateToProps = ({ student }) => ({
+const mapState = ({ student }) => ({
   student,
 });
 
-const mapDispatchToProps = (dispatch, { history }) => ({
+const mapDispatch = (dispatch, { history }) => ({
   updateStudent: (student) => dispatch(updateStudentThunk(student, history)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UpdateStudent);
+export default connect(mapState, mapDispatch)(UpdateStudent);

@@ -45,7 +45,6 @@ const campusReducer = (campus = {}, action) => {
           (student) => student.id !== action.student.id
         ),
       };
-
     default:
       return campus;
   }

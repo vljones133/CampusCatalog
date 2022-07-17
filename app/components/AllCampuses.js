@@ -36,7 +36,9 @@ export class AllCampuses extends React.Component {
                 alt="image of campus"
               />
               <div className="card-body">
-                <h4 className="card-title">{campus.name}</h4>
+                <h4 className="card-title">
+                  <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+                </h4>
 
                 <address className="card-subtitle">{campus.address}</address>
                 <p className="card-text">{campus.description}</p>

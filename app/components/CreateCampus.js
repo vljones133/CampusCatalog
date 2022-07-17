@@ -93,8 +93,8 @@ class CreateCampus extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch, { history }) => ({
+const mapDispatch = (dispatch, { history }) => ({
   createCampus: (campus) => dispatch(createCampusThunk(campus, history)),
 });
 
-export default connect(null, mapDispatchToProps)(CreateCampus);
+export default connect(null, mapDispatch)(CreateCampus);

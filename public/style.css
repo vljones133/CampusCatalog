@@ -1,18 +1,10 @@
 /*
 site color theme:
-- royal blue dark: 0a1045
 - timerwolf: d3d0cb
 - platinum: E7E5DF
 - maize crayola: E7BB41
 - goldenrod: #E4B125 - #daa71b
-*/
-
-/*
-site color theme:
-- header text: #333;
-- gold header: #dfab82;
 - blue button: #41547d;
-- gold button: #dfab82;
 - dark blue: #232c43;
 - dark blue black: 0e121b
 */
@@ -27,7 +19,6 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  /* font-family: 'Inter', sans-serif; */
   letter-spacing: 0.7px;
 
   font-family: Open Sans, Arial, sans-serif;
@@ -192,10 +183,7 @@ a.btn.btn-primary {
   font-family: 'Muli', sans-serif !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
-  padding-top: 18px !important;
-  padding-right: 30px !important;
-  padding-bottom: 18px !important;
-  padding-left: 30px !important;
+  padding: 18px 30px 18px 30px !important;
   box-shadow: 0px 10px 20px 0px rgb(223 171 130 / 24%);
   transition: box-shadow 300ms ease 0ms;
   -webkit-transition-duration: 0.2s;
@@ -289,10 +277,7 @@ button.accordion-button.collapsed,
   font-weight: 800 !important;
   text-transform: uppercase !important;
   background-color: #ffffff;
-  padding-top: 18px !important;
-  padding-right: 30px !important;
-  padding-bottom: 18px !important;
-  padding-left: 30px !important;
+  padding: 18px 30px !important;
   box-shadow: 0px 10px 20px 0px rgb(65 84 125 / 6%);
   transition: box-shadow 300ms ease 0ms;
 }
@@ -331,33 +316,6 @@ h3.featurette-heading.fw-normal.lh-1 {
   margin-top: 55px;
 }
 
-/* Single Page */
-
-h2.featurette-heading {
-  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  font-weight: 800 !important;
-  font-size: 2.5em;
-  line-height: 1.5em !important;
-  color: #0e121b !important;
-}
-
-.single-page {
-  margin-top: 20px;
-}
-
-.single-page a {
-  color: #41547d !important;
-  letter-spacing: 2px;
-  font-size: 14px;
-  font-family: 'Muli', sans-serif !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-}
-
-.single-page a.email {
-  color: #daa71b !important;
-}
-
 /* card CSS*/
 
 .card,
@@ -366,11 +324,17 @@ h2.featurette-heading {
   border-radius: 0 !important;
 }
 
-h4.card-title {
+h4.card-title a {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 800;
   font-size: 28px;
   line-height: 1em;
+  text-decoration: none;
+  color: #0e121b;
+}
+
+h4.card-title a:hover {
+  color: #41547d;
 }
 
 .card-body {
@@ -384,12 +348,12 @@ h4.card-title {
 }
 
 .all-campuses .card-body {
-  height: 250px;
+  height: 256px;
 }
 
 .card-text {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -400,8 +364,7 @@ h4.card-title {
 }
 
 address.card-subtitle {
-  color: #6c757d;
-  font-style: italic;
+  margin-bottom: 7px;
 }
 
 address {
@@ -432,8 +395,31 @@ address {
 
 /* Single Page */
 
+h2.featurette-heading {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 800 !important;
+  font-size: 2.5em;
+  line-height: 1.5em !important;
+  color: #0e121b !important;
+}
+
 .single-page {
-  max-width: 90%;
+  margin-top: 55px;
+  width: 90%;
+  max-width: 1250px;
+}
+
+.single-page a {
+  color: #41547d !important;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-family: 'Muli', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+}
+
+.single-page a.email {
+  color: #daa71b !important;
 }
 
 .single-page .list-group-item {
@@ -453,7 +439,6 @@ form#create-form {
 #create-form h2 {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 800;
-  /* font-size: 28px; */
   line-height: 1em;
 }
 
@@ -482,4 +467,26 @@ a#toTopBtn:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05) !important;
   background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg)
     no-repeat center 50%;
+}
+
+footer {
+  position: fixed;
+  z-index: 100;
+  background-color: #232c43d1;
+  bottom: 0;
+  width: 100%;
+  height: 47px;
+  left: 0;
+  margin-bottom: 0 !important;
+  padding: 5px 20px !important;
+  border: none !important;
+}
+
+footer .text-muted {
+  color: #d6d6d6 !important;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  letter-spacing: 1.3px;
+  font-size: 14px;
 }

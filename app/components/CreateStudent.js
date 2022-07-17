@@ -41,7 +41,7 @@ class CreateStudent extends Component {
         className="needs-validation"
         onSubmit={handleSubmit}
       >
-        <h3>Add a new student here:</h3>
+        <h2>Add a new student here:</h2>
 
         <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
@@ -79,7 +79,9 @@ class CreateStudent extends Component {
             value={email}
             required
           />
-          <div className="invalid-feedback">Please enter a valid email address.</div>
+          <div className="invalid-feedback">
+            Please enter a valid email address.
+          </div>
         </div>
 
         <div className="form-group">
@@ -108,8 +110,8 @@ class CreateStudent extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch, { history }) => ({
+const mapDispatch = (dispatch, { history }) => ({
   createStudent: (student) => dispatch(createStudentThunk(student, history)),
 });
 
-export default connect(null, mapDispatchToProps)(CreateStudent);
+export default connect(null, mapDispatch)(CreateStudent);

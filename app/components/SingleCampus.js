@@ -115,15 +115,14 @@ class Campus extends React.Component {
   }
 }
 
-const mapStateToProps = ({ campus }) => ({
+const mapState = ({ campus }) => ({
   campus,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatch = (dispatch) => ({
   getCampus: (id) => dispatch(fetchCampus(id)),
-  updateStudent: (student) => dispatch(updateStudentThunk(student)),
   updateCampusStudents: (student) =>
     dispatch(updateCampusStudentsThunk(student)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Campus);
+export default connect(mapState, mapDispatch)(Campus);

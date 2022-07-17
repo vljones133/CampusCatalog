@@ -96,12 +96,12 @@ class Student extends React.Component {
   }
 }
 
-const mapStateToProps = ({ student }) => ({
+const mapState = ({ student }) => ({
   student,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatch = (dispatch) => ({
   getStudent: (id) => dispatch(fetchStudent(id)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Student);
+export default connect(mapState, mapDispatch)(Student);

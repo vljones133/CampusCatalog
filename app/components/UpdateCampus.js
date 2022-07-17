@@ -108,12 +108,12 @@ class UpdateCampus extends Component {
   }
 }
 
-const mapStateToProps = ({ campus }) => ({
+const mapState = ({ campus }) => ({
   campus,
 });
 
-const mapDispatchToProps = (dispatch, { history }) => ({
+const mapDispatch = (dispatch, { history }) => ({
   updateCampus: (campus) => dispatch(updateCampusThunk(campus, history)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UpdateCampus);
+export default connect(mapState, mapDispatch)(UpdateCampus);
