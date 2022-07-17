@@ -37,7 +37,7 @@
     "email": "lsmees4@sakura.ne.jp",
     "imageUrl": "https://images.unsplash.com/photo-1517842536804-bf6629e2c291?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     "gpa": 2.5,
-    "campusId": 1
+    "campusId": 3
   },
   {
     "firstName": "Brena",
@@ -365,7 +365,7 @@
     "email": "bberesfore19@plala.or.jp",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 2.1,
-    "campusId": 1
+    "campusId": 2
   },
   {
     "firstName": "Rozele",
@@ -373,7 +373,7 @@
     "email": "rmacgeaney1a@github.com",
     "imageUrl": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "gpa": 1.7,
-    "campusId": 1
+    "campusId": 2
   },
   {
     "firstName": "Irina",
@@ -381,7 +381,7 @@
     "email": "ibutterfield1b@yale.edu",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 2.4,
-    "campusId": 1
+    "campusId": 3
   },
   {
     "firstName": "Homer",
@@ -389,7 +389,7 @@
     "email": "hmival1c@amazonaws.com",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 4.0,
-    "campusId": 1
+    "campusId": 4
   },
   {
     "firstName": "Hilary",
@@ -397,7 +397,7 @@
     "email": "htookey1d@t.co",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 0.2,
-    "campusId": 1
+    "campusId": 5
   },
   {
     "firstName": "Blithe",
@@ -405,7 +405,7 @@
     "email": "bkasparski1e@soup.io",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 2.8,
-    "campusId": 1
+    "campusId": 6
   },
   {
     "firstName": "Angelika",
@@ -413,7 +413,7 @@
     "email": "anudde1f@omniture.com",
     "imageUrl": "http://dummyimage.com/400x400.png/dddddd/000000",
     "gpa": 1.1,
-    "campusId": 1
+    "campusId": 7
   },
   {
     "firstName": "Nydia",
@@ -421,7 +421,7 @@
     "email": "nmilne1g@altervista.org",
     "imageUrl": "http://dummyimage.com/400x400.png/dddddd/000000",
     "gpa": 0.8,
-    "campusId": 1
+    "campusId": 12
   },
   {
     "firstName": "Polly",
@@ -429,7 +429,7 @@
     "email": "pcatlette1h@ca.gov",
     "imageUrl": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "gpa": 1.4,
-    "campusId": 1
+    "campusId": 11
   },
   {
     "firstName": "Armando",
@@ -445,7 +445,7 @@
     "email": "roram1j@amazon.co.uk",
     "imageUrl": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "gpa": 3.5,
-    "campusId": 13
+    "campusId": 9
   },
   {
     "firstName": "Templeton",
@@ -453,7 +453,7 @@
     "email": "tganders1k@nature.com",
     "imageUrl": "http://dummyimage.com/400x400.png/dddddd/000000",
     "gpa": 2.6,
-    "campusId": 1
+    "campusId": 10
   },
   {
     "firstName": "Elly",
@@ -469,7 +469,7 @@
     "email": "ameldrum1m@shutterfly.com",
     "imageUrl": "http://dummyimage.com/400x400.png/dddddd/000000",
     "gpa": 0.7,
-    "campusId": 13
+    "campusId": 8
   },
   {
     "firstName": "Lori",
@@ -477,7 +477,7 @@
     "email": "lfryers1n@loc.gov",
     "imageUrl": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "gpa": 2.7,
-    "campusId": 13
+    "campusId": 7
   },
   {
     "firstName": "Desiri",
@@ -485,7 +485,7 @@
     "email": "dgadie1o@opensource.org",
     "imageUrl": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "gpa": 2.0,
-    "campusId": 13
+    "campusId": 4
   },
   {
     "firstName": "Elihu",
@@ -493,7 +493,7 @@
     "email": "epirelli1p@wix.com",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 0.6,
-    "campusId": 13
+    "campusId": 3
   },
   {
     "firstName": "Meg",
@@ -501,7 +501,7 @@
     "email": "mmalster1q@digg.com",
     "imageUrl": "http://dummyimage.com/400x400.png/dddddd/000000",
     "gpa": 2.8,
-    "campusId": 13
+    "campusId": 2
   },
   {
     "firstName": "Sylvan",
@@ -509,7 +509,7 @@
     "email": "slarman1r@accuweather.com",
     "imageUrl": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "gpa": 2.4,
-    "campusId": 13
+    "campusId": 5
   },
   {
     "firstName": "Ray",
@@ -517,7 +517,7 @@
     "email": "rscutts1s@yolasite.com",
     "imageUrl": "http://dummyimage.com/400x400.png/cc0000/ffffff",
     "gpa": 2.8,
-    "campusId": 13
+    "campusId": 6
   },
   {
     "firstName": "Dianemarie",
@@ -605,7 +605,7 @@
     "email": "mkimbly23@theguardian.com",
     "imageUrl": "http://dummyimage.com/400x400.png/5fa2dd/ffffff",
     "gpa": 0.0,
-    "campusId": 13
+    "campusId": 1
   },
   {
     "firstName": "Claudius",
@@ -794,6 +794,6 @@
     "email": "mledford2r@sourceforge.net",
     "imageUrl": "http://dummyimage.com/400x400.png/ff4444/ffffff",
     "gpa": 3.7,
-    "campusId": 1
+    "campusId": 10
   }
 ]

@@ -283,7 +283,8 @@ a:hover {
 }
 
 button.accordion-button.collapsed,
-.accordion-body {
+.accordion-body,
+.not-found .accordion-body {
   color: #41547d !important;
   border-width: 0px !important;
   border-color: rgba(0, 0, 0, 0);
@@ -303,6 +304,13 @@ button.accordion-button.collapsed,
   color: #777 !important;
   background-color: #f9f9f9 !important;
   box-shadow: inset 0 1px 0 #999 !important;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-family: 'Muli', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  background-color: #ffffff;
 }
 
 .accordion-header {
@@ -422,9 +430,11 @@ h2.featurette-heading {
 }
 
 .single-page {
-  margin-top: 55px;
+  /* margin-top: 55px; */
+  margin-top: 90px;
   width: 90%;
   max-width: 1250px;
+  padding-bottom: 55px;
 }
 
 .single-page a {
@@ -436,7 +446,8 @@ h2.featurette-heading {
   text-transform: uppercase !important;
 }
 
-.single-page a.email {
+.single-page a.email,
+.not-found a {
   color: #daa71b !important;
 }
 
@@ -446,6 +457,10 @@ h2.featurette-heading {
 
 .single-page hr {
   margin: 3rem 0;
+}
+
+.single-page img {
+  max-height: 600px;
 }
 
 /* Create Pages */
@@ -458,6 +473,14 @@ form#create-form {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 800;
   line-height: 1em;
+}
+
+.not-found #create-form h2 {
+  font-weight: 400 !important;
+  font-size: 1.4em;
+  line-height: 1.5em !important;
+  color: #333 !important;
+  font-family: 'Work Sans', sans-serif;
 }
 
 /* To Top Button */
