@@ -17,12 +17,6 @@ export class AllCampuses extends React.Component {
   }
 
   render() {
-    const goToTop = () => {
-      document.body.scrollIntoView({
-        behavior: 'smooth',
-      });
-    };
-
     const loading = (
       <div className="spinner-border text-secondary" role="status">
         <span className="visually-hidden">Loading...</span>
@@ -94,6 +88,7 @@ export class AllCampuses extends React.Component {
             </div>
           </div>
         </div>
+        <a href="#" id="toTopBtn" className="cd-top" />
       </div>
     );
   }

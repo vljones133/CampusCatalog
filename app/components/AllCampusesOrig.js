@@ -66,6 +66,12 @@ export class AllCampuses extends React.Component {
         <button id="toTop" type="button" onClick={goToTop}>
           ^Top
         </button>
+        <a
+          href="#"
+          id="toTopBtn"
+          className="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+          data-abc="true"
+        />
       </main>
     );
   }
