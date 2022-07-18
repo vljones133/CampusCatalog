@@ -64,7 +64,7 @@ export class AllStudents extends React.Component {
 
     const MapStudents = () => {
       return filteredStudents().map((student) => (
-        <MappedStudent key={student.id} />
+        <MappedStudent key={student.id} student={student} />
       ));
     };
 

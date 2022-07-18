@@ -16,9 +16,15 @@ const updateCampus = (campus) => {
   };
 };
 
-export const fetchCampus = (id) => async (dispatch) => {
-  const campusResponse = await axios.get(`/api/campuses/${id}`);
-  dispatch(setCampus(campusResponse.data));
+export const fetchCampus = (id) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.get(`/api/campuses/${id}`);
+      dispatch(setCampus(response.data));
+    } catch (err) {
+      console.log(err.response);
+    }
+  };
 };
 
 export const updateCampusThunk = (campus) => {
