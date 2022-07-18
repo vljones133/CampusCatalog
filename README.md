@@ -1,5 +1,8 @@
 # Junior Phase Final Project
 
+## DEMO VIDEO
+https://youtu.be/QAtCupfu9o0
+
 ## Getting started
 
 1. Fork and clone this repo.
