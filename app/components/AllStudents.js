@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchStudents, deleteStudentThunk } from '../redux/students';
+import { fetchStudents } from '../redux/students';
 import MappedStudent from './MappedStudent';
 
 export class AllStudents extends React.Component {
@@ -64,7 +64,7 @@ export class AllStudents extends React.Component {
 
     const MapStudents = () => {
       return filteredStudents().map((student) => (
-        <MappedStudent key={student.id} student={student} />
+        <MappedStudent key={student.id} />
       ));
     };
 
@@ -85,7 +85,7 @@ export class AllStudents extends React.Component {
                 className="custom-select"
                 onChange={(e) => this.sortStudents(e.target.value)}
               >
-                <option selected>Sort by</option>
+                <option defaultValue="lastName">Sort by</option>
                 <option value="lastName">Last name</option>
                 <option value="gpa">GPA</option>
               </select>
@@ -95,9 +95,7 @@ export class AllStudents extends React.Component {
                 value={this.state.selectedStudents}
                 onChange={this.selectStudents}
               >
-                <option selected value="all">
-                  Filter by
-                </option>
+                <option defaultValue="all">Filter by</option>
                 <option value="all">All Students</option>
                 <option value="unregistered">Unregistered</option>
               </select>
@@ -123,7 +121,6 @@ const mapState = ({ students }) => ({
 
 const mapDispatch = (dispatch) => ({
   getStudents: () => dispatch(fetchStudents()),
-  deleteStudent: (student) => dispatch(deleteStudentThunk(student, history)),
 });
 
 export default connect(mapState, mapDispatch)(AllStudents);

@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { deleteStudentThunk } from '../redux/students';
 
 class MappedStudent extends React.Component {
   constructor(props) {
@@ -51,10 +53,12 @@ class MappedStudent extends React.Component {
   }
 }
 
-// const mapState = ({ student }) => ({
-//   student,
-// });
+const mapState = ({ student }) => ({
+  student,
+});
 
-// export default connect(mapState)(MappedStudent);
+const mapDispatch = (dispatch) => ({
+  deleteStudent: (student) => dispatch(deleteStudentThunk(student, history)),
+});
 
-export default MappedStudent;
+export default connect(mapState, mapDispatch)(MappedStudent);
