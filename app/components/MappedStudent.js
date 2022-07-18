@@ -42,10 +42,6 @@ const MappedStudentView = ({ student, deleteStudent }) => (
   </div>
 );
 
-// const mapState = ({ store }) => ({
-//   store,
-// });
-
 const mapDispatch = (dispatch) => ({
   deleteStudent: (student) => dispatch(deleteStudentThunk(student, history)),
 });
