@@ -3,8 +3,8 @@
 // with your models, for which you'll find some blank files in this directory:
 
 const db = require('./database');
-const Student = require('./Student');
-const Campus = require('./Campus');
+const Student = require('./student');
+const Campus = require('./campus');
 
 Student.belongsTo(Campus);
 Campus.hasMany(Student);
