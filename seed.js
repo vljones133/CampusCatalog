@@ -1,8 +1,8 @@
 const { green, red } = require('chalk');
 const { db } = require('./server/db');
 
-const Campus = require('./server/db/Campus');
-const Student = require('./server/db/Student');
+const Campus = require('./server/db/campus');
+const Student = require('./server/db/student');
 
 const campuses = require('./bin/MOCK_DATA_campuses.json');
 const students = require('./bin/MOCK_DATA_students.json');
