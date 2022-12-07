@@ -16,7 +16,8 @@ const dbName = process.env.NODE_ENV === 'test' ? `${pkg.name}-test` : pkg.name;
 console.log(chalk.yellow(`Opening database connection to ${dbName}`));
 
 const db = new Sequelize(
-  process.env.DATABASE_URL || `postgres://localhost:5432/${dbName}`,
+  process.env.DATABASE_URL ||
+    `postgresql://vljones133:v2_3wYGZ_mgtXzpeKzdZe2ZrCVaGZq9S@db.bit.io/vljones133/${dbName}?ssl=true`,
   {
     logging: false,
     dialectOptions: {
