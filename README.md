@@ -3,6 +3,9 @@
 ## DEMO VIDEO
 https://youtu.be/QAtCupfu9o0
 
+## WEBSITE
+https://campus-catalog.herokuapp.com
+
 ## Getting started
 
 1. Fork and clone this repo.
